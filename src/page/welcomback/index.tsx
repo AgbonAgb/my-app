@@ -1,11 +1,11 @@
-import PaymentmsgComp from '../../components/paymentmsg'
+import PaymentmsgComp from '../../components/paymentmsg';
 
 const Welcomback = () => {
-    return (
-        <main>
-            <PaymentmsgComp />
-        </main>
-    );
-}
+	return (
+		<main>
+			<PaymentmsgComp amount={3000} />
+		</main>
+	);
+};
 
 export default Welcomback;
