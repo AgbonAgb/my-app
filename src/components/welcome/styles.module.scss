@@ -1,0 +1,51 @@
+.section {
+	max-width: 70rem;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	padding: 5.75rem 6.5rem 8.5625rem 6.5rem;
+	justify-content: center;
+	align-items: center;
+	margin-inline: auto;
+}
+
+
+.heading {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	color: #574d90;
+	font-family: Montserrat;
+	font-size: 2.25rem;
+	font-weight: 700;
+	margin-block-end: 1.5rem;
+}
+
+.welcomeIcon {
+	width: 3.48213rem;
+	height: 3.75rem;
+}
+
+.para {
+	color: #011602;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2.75rem;
+	margin-block-end: 7.5rem;
+}
+
+.btn {
+	height: 3.5rem;
+	padding: 0.5rem 8.71875rem;
+	border-radius: 0.25rem;
+	background: #574d90;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 700;
+	outline: none;
+	cursor: pointer;
+	border: none;
+}

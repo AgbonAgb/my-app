@@ -1,0 +1,117 @@
+.section {
+	max-width: 70rem;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	padding: 5.75rem 6.5rem 8.5625rem 6.5rem;
+	justify-content: center;
+	align-items: center;
+	margin-inline: auto;
+}
+
+.article {}
+
+.heading {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	/*space between welcome image and message;*/
+	/*this makes image and text to be on same line*/
+	color: #574D90;
+	font-family: Montserrat;
+	font-size: 2.25rem;
+	/*font-style: normal;*/
+	font-weight: 700;
+	line-height: 2.75rem;
+	/* 122.222% */
+	margin-block-end: 1rem;
+	/* space btw text up and down */
+
+}
+
+.welcomeicon {
+	/* Icon height and width */
+	width: 3.48213rem;
+	height: 3.75rem;
+}
+
+.nairaicon {
+	width: 1.33331rem;
+	height: 1.25rem;
+}
+
+.para {
+
+	color: #011602;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2.75rem;
+	/* 220% */
+	margin-block-end: 1rem;
+}
+
+.para2 {
+	display: flex;
+	width: 34.8125rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.Fee {
+	display: flex;
+	width: 14.4375rem;
+	flex-shrink: 0;
+
+	color: #011602;
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: Montserrat;
+	font-size: 1.5rem;
+
+	font-weight: 700;
+	line-height: 1.5625rem;
+	/* 104.167% */
+	letter-spacing: -0.015rem;
+
+	
+}
+
+.arrow {
+	height: 1.25rem;
+	flex-shrink: 0;
+}
+
+.ctndb {
+	color: #574D90;
+	font-family: Montserrat;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 2.5rem;
+	/* 250% */
+}
+
+.btn {
+	height: 3.5rem;
+	padding: 0.5rem 8.71875rem;
+
+	border-radius: 0.25rem;
+	background: #574D90;
+
+	margin-block-start: 3.75rem;
+	margin-block-end: 1rem;
+
+	/*Button Text */
+	color: #FFF;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 700;
+
+	outline: none;
+	cursor: pointer;
+	border: none;
+
+}
