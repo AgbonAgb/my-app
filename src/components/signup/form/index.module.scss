@@ -1,39 +1,37 @@
 .form {
-    background: #E1DDFC;
-    padding-block: 78px; //vert dist between textbox
-    padding-inline: 180px; // dist between txt and wall sideways
-    display: flex;
-    flex-direction: column;
-    // gap: 28px; //space btw text control
-    align-items: center;
-
+	background: #e1ddfc;
+	padding-block: 78px; //vert dist between textbox
+	padding-inline: 180px; // dist between txt and wall sideways
+	display: flex;
+	flex-direction: column;
+	// gap: 28px; //space btw text control
+	align-items: center;
 }
 
 .inputSection {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 28px; //space btw text control
-    align-items: center;
-    margin-block-end: 64px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 28px; //space btw text control
+	align-items: center;
+	margin-block-end: 64px;
 }
 
 .btn {
-    margin-block-end: 16px;
+	margin-block-end: 16px;
 }
 
 .para {
-    color: #011C34;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
+	color: #011c34;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
 }
 
 .span {
-    color: #E24F6D;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    
+	color: #e24f6d;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
 }
