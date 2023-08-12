@@ -1,0 +1,21 @@
+.input {
+    display: inline-block;
+    width: min(640px, 100%); //for responsive input
+    //txt style
+    border-radius: 8px;
+    border: 2px solid var(--white, #FFF);
+    background: var(--white, #FFF);
+    //txt placeholder
+    padding-block: 17px;
+    padding-inline: 16px;
+    color: var(color-text);
+}
+
+.input::placeholder {
+    color: #A89E95;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+
+}

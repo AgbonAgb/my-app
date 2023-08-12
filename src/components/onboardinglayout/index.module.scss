@@ -1,0 +1,49 @@
+.main {
+    /*margin-block-start: 63px;
+    margin-block-end: 95px;*/
+    padding-block: 63px 95px;
+    padding-inline: 220px; //main form from side
+    //background-color: orange;
+}
+
+.ecclipseLeft {
+    position: fixed;
+    left: 0;
+    top: 131px;
+    z-index: -1;
+}
+
+.ecclipseRight {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.heading {
+    color: var(--yellow-black, #302711);
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    margin-block-end: 20px;
+}
+
+.subheading {
+    color: var(--yellow-black, #302711);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-block-end: 50px;
+}
+
+.layout {
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+}

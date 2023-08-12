@@ -1,0 +1,22 @@
+.button {
+    border-radius: 4px;
+    background-color: #574D90;
+    display: flex;
+    width: min(640px, 100px);
+    //height: 56px;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    //gap: 16px;
+    //text in button
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    outline: 0;
+    // line-height: 30px;
+    /* 150% */
+
+}
