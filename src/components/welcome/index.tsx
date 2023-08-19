@@ -1,6 +1,14 @@
 import styles from './styles.module.scss';
 import Welocome from '../../assets/welcome-icon.jpg';
+import { Link, useNavigate } from 'react-router-dom';
+
 const Welcome = () => {
+	// const navigate = useNavigate();
+
+	// const handleNavigate = () => {
+	// 	navigate('/create-account');
+	// };
+
 	return (
 		<section className={styles.section}>
 			<article className={styles.article}>
@@ -13,7 +21,9 @@ const Welcome = () => {
 				</p>
 			</article>
 
-			<button className={styles.btn}>CONTINUE TO DASHBOARD</button>
+			<Link className={styles.btn} to='/create-account'>
+				CONTINUE TO DASHBOARD
+			</Link>
 		</section>
 	);
 };
