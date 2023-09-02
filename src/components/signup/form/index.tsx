@@ -35,7 +35,7 @@ const Form = () => {
 		userName: `${person.firstName}${person.lastName}`,
 		email: EmailAddress,
 		password: Password,
-		phoneNumber:PhoneNumber
+		phoneNumber: PhoneNumber
 	};
 
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -43,7 +43,8 @@ const Form = () => {
 
 		try {
 			//http://myreacttest.mjdtech.ng:1977/api/Authentication/RegisterUser
-			const response = await fetch('https://localhost:5001/api/Authentication/RegisterUser', {
+			//https://localhost:5001/api/Authentication/RegisterUser
+			const response = await fetch('http://myreacttest.mjdtech.ng:1977/api/Authentication/RegisterUser', {
 				method: 'POST',
 				body: JSON.stringify(user),
 				headers: {
