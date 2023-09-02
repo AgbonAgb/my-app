@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 import Welocome from '../../assets/welcome-icon.jpg';
 import { Link, useNavigate } from 'react-router-dom';
+import Say from '../../say';
 
 const Welcome = () => {
 	// const navigate = useNavigate();
