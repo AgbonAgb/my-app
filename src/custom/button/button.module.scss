@@ -3,6 +3,7 @@
 	background-color: #574d90;
 	display: flex;
 	width: min(640px, 100%);
+	// width: 640px;
 	//height: 56px;
 	padding: 8px 14px;
 	justify-content: center;
@@ -18,4 +19,9 @@
 	outline: 0;
 	// line-height: 30px;
 	/* 150% */
+	height: 56px;
+	// padding: 8px 24px;
+	// justify-content: center;
+	// align-items: center;
+	// gap: 16px;
 }

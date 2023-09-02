@@ -1,6 +1,6 @@
 .input {
     display: inline-block;
-    width: min(640px, 100%); //for responsive input
+    // width: min(640px, 100%); //for responsive input
     //txt style
     border-radius: 8px;
     border: 2px solid var(--white, #FFF);
@@ -9,6 +9,12 @@
     padding-block: 17px;
     padding-inline: 16px;
     color: var(color-text);
+
+    display: flex;
+    width: 600px;
+    height: 64px;
+
+
 }
 
 .input::placeholder {
@@ -18,4 +24,11 @@
     font-style: normal;
     font-weight: 400;
 
+}
+
+.position {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
