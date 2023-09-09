@@ -2,16 +2,17 @@ import { ChangeEvent, FormEvent, MouseEvent, useState, Fragment } from 'react';
 import styles from './index.module.scss';
 import Input from '../../../custom/input/input';
 import Button from '../../../custom/button/button';
+import { request } from '../../utils/apiCall';
+import { Link } from 'react-router-dom';
 
 interface Person {
 	name: string;
 }
 
 const Form = () => {
-	const [state, setState] = useState('');
-	const [name, setName] = useState('jude');
 	const [error, setError] = useState('');
-
+	const [isLoading, setIsLoading] = useState(false);
+	const [successMessage, setSuccessMessage] = useState('');
 	// const [firstName, setFirsName] = useState('');
 	// const [lastName, setLastName] = useState('');
 	const [PhoneNumber, setPhoneNumber] = useState(''); //Value and action
@@ -28,41 +29,31 @@ const Form = () => {
 		lastName: '',
 	});
 
-	const user = {
-		firstName: person.firstName,
-		lastName: person.lastName,
-		userType: 'MacUser',
-		userName: `${person.firstName}${person.lastName}`,
-		email: EmailAddress,
-		password: Password,
-		phoneNumber: PhoneNumber
-	};
-
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
+		const user = {
+			firstName: person.firstName,
+			lastName: person.lastName,
+			userType: 'Applicant',
+			userName: `${person.firstName}${person.lastName}`,
+			email: EmailAddress,
+			password: Password,
+		};
+
+		setIsLoading(true);
+		setError('');
+		setSuccessMessage('');
+
 		try {
-			//http://myreacttest.mjdtech.ng:1977/api/Authentication/RegisterUser
-			//https://localhost:5001/api/Authentication/RegisterUser
-			const response = await fetch('http://myreacttest.mjdtech.ng:1977/api/Authentication/RegisterUser', {
-				method: 'POST',
-				body: JSON.stringify(user),
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			});
+			(await request.post('/Authentication/RegisterUser', user)) as Person;
 
-			const result = (await response.json()) as Person;
-
-			console.log(result);
+			setSuccessMessage('User has been successfully registered');
 		} catch (error: any) {
 			setError(error?.response?.data?.message ?? error?.mesage);
+		} finally {
+			setIsLoading(false);
 		}
-	};
-
-	const handleButtonClick = (e: MouseEvent<HTMLButtonElement>) => {
-		e.stopPropagation();
-		setName('Mr BAT');
 	};
 
 	//generic
@@ -100,20 +91,12 @@ const Form = () => {
 		const { value } = e.target;
 		setPassword(value);
 	};
+
 	//handleConfirmPassword
 	const handleConfirmPassword = (e: ChangeEvent<HTMLInputElement>) => {
 		const { value } = e.target;
 		setConfirmPassword(value);
 	};
-
-	console.log({
-		PhoneNumber,
-		EmailAddress,
-		ConfirmPassword,
-		Password,
-		Firstname: person.firstName,
-		LastName: person.lastName,
-	});
 
 	return (
 		<Fragment>
@@ -132,10 +115,7 @@ const Form = () => {
 					<Input placeholder='Phone Number' type='text' name='PhoneNumber' onChange={handlePhone} value={PhoneNumber} />
 					<Input
 						placeholder='Email Address'
-						type='email'
-						name='EmailAddress'
-						onChange={handleEmail}
-						value={EmailAddress}
+						type='email' name='EmailAddress' onChange={handleEmail} value={EmailAddress}
 					/>
 					<Input placeholder='Password' type='password' name='Password' onChange={handlePassword} value={Password} />
 					<Input
@@ -146,9 +126,14 @@ const Form = () => {
 						value={ConfirmPassword}
 					/>
 				</section>
-				<Button text='SIGN UP' className={styles.btn} onClick={handleButtonClick} />
+				<Button text={isLoading ? 'Sign up...' : 'SIGN UP'} className={styles.btn} disabled={isLoading} />
+				{error && <p className='error'>{error}</p>}
+				{successMessage && <p className='success'>{successMessage}</p>}
 				<p className={styles.para}>
-					Already have an account?<span className={styles.span}>SIGN IN</span>
+					Already have an account?
+					<Link to='/login' className={styles.span}>
+						SIGN IN
+					</Link>
 				</p>
 			</form>
 		</Fragment>
