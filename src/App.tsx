@@ -3,6 +3,7 @@ import Homepage from './page/home';
 import Login from './page/login/login';
 import Welcomback from './page/welcomback';
 import Creataccount from './page/createaccount';
+import Dashboard from './page/dashboard/dashboard';
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 			<Route element={<Login />} path='/login' />
 			<Route element={<Welcomback />} path='/welcomback' />
 			<Route element={<Creataccount />} path='/create-account' />
+			<Route element={<Dashboard />} path='/dashboard' />
 		</Routes>
 	);
 }

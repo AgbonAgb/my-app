@@ -2,24 +2,28 @@ import styles from '../login/login.module.scss';
 import Input from '../../custom/input/input';
 import Button from '../../custom/button/button';
 import { Link } from 'react-router-dom';
-import { ChangeEvent, FormEvent, MouseEvent, useState, Fragment } from 'react';
+import { ChangeEvent, FormEvent, useState, useEffect } from 'react';
 //import { request } from '../utils/apiCall';
 import { request } from '../utils/apiCall';
-interface Person {
-	name: string;
-}
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-
+	const navigate = useNavigate();
 	const [error, setError] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 	const [successMessage, setSuccessMessage] = useState('');
+	const [token, setToken] = useState(() => localStorage.getItem('token'));
+
+	useEffect(() => {
+		if (token) {
+			navigate('/dashboard');
+		}
+	}, [token]);
 
 	//Set/Declaration of States
 	const [EmailAddress, setEmail] = useState(''); //Value and action
 	//setPassword
 	const [Password, setPassword] = useState('');
-
 
 	//Handle Input changes
 	const handleEmail = (e: ChangeEvent<HTMLInputElement>) => {
@@ -40,15 +44,15 @@ const Login = () => {
 			email: EmailAddress,
 			password: Password,
 		};
-		console.log('Action Triggered');
-		console.log(EmailAddress);
+
 		setIsLoading(true);
 		setError('');
 		setSuccessMessage('');
 
 		try {
-			(await request.post('/Authentication/Authenticate', LoginDto)) as Person;
-
+			const token = (await request.post('/Authentication/Authenticate', LoginDto))?.data as string;
+			localStorage.setItem('token', token);
+			setToken(token);
 			setSuccessMessage('User Login successful');
 		} catch (error: any) {
 			setError(error?.response?.data?.message ?? error?.mesage);
@@ -56,7 +60,6 @@ const Login = () => {
 			setIsLoading(false);
 		}
 	};
-
 
 	//Rt
 	return (
