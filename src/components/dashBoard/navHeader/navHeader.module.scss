@@ -1,0 +1,102 @@
+.hamburgerStyle {
+    color: #11643C;
+    width: 4rem;
+    height: 8rem;
+    margin-inline-start: 2rem;
+    padding: 0!important;
+}
+
+.hamburgerStyle svg path {
+    fill: currentColor;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1.183rem;
+    height: 6rem;
+    justify-content: space-between;
+    background-color: #D9EBCC;
+    padding: 1.8rem;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.button{
+    min-width: 0;
+    padding: 0px!important;
+    cursor: pointer;
+    &:hover{
+    background-color: transparent!important;
+    }
+}
+.date{
+    font-size: 1.5rem;
+}
+@media (max-width: 480px) {
+    .date {
+        display: none;
+    }
+}
+
+.notificationheader{
+    font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 25px;
+padding-inline-start: 2rem;
+color: #11643C;
+}
+
+.notificationmessage {
+font-size: 1.5rem;
+// line-height: 23px;
+color: #011C34;
+font-family: 'Poppins', sans-serif!important;
+white-space: wrap;
+// width: 100%;
+
+
+@media  screen and (max-width:480px) {
+    font-size: 1.2rem;
+    // white-space: wrap;
+    text-wrap: wrap;
+}
+}
+
+.printButton {
+    height: 5.2rem;
+    background-color: #11643C;
+    border: 0.1rem solid #11643C;
+   
+    border-radius: 0.4rem;
+    padding-inline: 0.6rem;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+        width: 10rem;
+    }
+
+    &:active {
+        background-color: #11643C;
+        border: 0.1rem solid #11643C;
+    }
+
+    &:focus {
+        background-color: #11643C;
+        border: 0.1rem solid #11643C;
+    }
+    &:disabled{  
+    background-color: #CBCED2;
+    border: 0.1rem solid #CBCED2;
+    }
+}

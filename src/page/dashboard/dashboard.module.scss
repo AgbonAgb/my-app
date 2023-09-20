@@ -18,7 +18,32 @@
 
 @media (min-width: 912px) {
     .content {
-        padding-inline-start: 20rem;
+        padding-inline-start: 30rem;
         padding-inline-end : 3rem
     }
 }
+.header {
+    grid-area: header;
+    text-align: center;
+    width: 100%;
+    margin-inline: 0rem;
+}
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+        'navHeader'
+        'header'
+        'main';
+    
+    @media screen and (min-width: 900px) {
+        grid-template-columns: 34.8rem 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+        'sidebar header'
+        'sidebar main';
+    }
+}
+

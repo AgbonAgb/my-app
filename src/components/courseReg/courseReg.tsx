@@ -2,7 +2,7 @@ import React from 'react'
 
 const CourseReg = ()=>{
 return(
-    <div>djjd</div>
-)
+    <h1>djdjdjj</h1>
+  )
 }
 export default CourseReg;
