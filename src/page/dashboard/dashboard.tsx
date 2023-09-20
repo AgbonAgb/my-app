@@ -1,6 +1,6 @@
 import { Drawer } from '@mui/material';
 import { useState } from 'react';
-// import Header from './header/header';
+// import NavHeader from '../../components/dashBoard/navbar/navbar';
 import styles from './dashboard.module.scss';
 import ModifiedSidebar from '../../components/dashBoard/sideBar/sideBar';
 
@@ -22,7 +22,7 @@ const Main: React.FC<ComponentProps & Props> = ({children, window}) => {
     return (
         <div>
 
-            {/* <Header handleSidebarToggle={handleSidebarToggle}/> */}
+            {/* <NavHeader handleSidebarToggle={handleSidebarToggle}/> */}
             <Drawer
                 variant="temporary"
                 open={mobileOpen}
