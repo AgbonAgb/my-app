@@ -4,6 +4,8 @@ import Login from './page/login/login';
 import Welcomback from './page/welcomback';
 import Creataccount from './page/createaccount';
 import Dashboard from './page/dashboard/dashboard';
+import CourseReg from './page/courseReg/courseReg';
+
 
 function App() {
 	return (
@@ -12,7 +14,7 @@ function App() {
 			<Route element={<Login />} path='/login' />
 			<Route element={<Welcomback />} path='/welcomback' />
 			<Route element={<Creataccount />} path='/create-account' />
-			<Route element={<Dashboard />} path='/dashboard' />
+			<Route element={<CourseReg />} path='/dashboard' />
 		</Routes>
 	);
 }
