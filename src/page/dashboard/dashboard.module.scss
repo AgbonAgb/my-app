@@ -29,6 +29,7 @@
     margin-inline: 0rem;
 }
 .container {
+    margin-inline:2rem;
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
@@ -39,7 +40,7 @@
         'main';
     
     @media screen and (min-width: 900px) {
-        grid-template-columns: 34.8rem 1fr;
+        grid-template-columns: 27.8rem 1fr;
         grid-template-rows: auto 1fr;
         grid-template-areas: 
         'sidebar header'
@@ -53,5 +54,10 @@
     width: 100%!important;
     z-index: 1!important;
 }
-
+.main {
+    grid-area: main;
+    min-width: 0;
+    overflow-y: auto;
+    
+}
 

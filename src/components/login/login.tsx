@@ -76,20 +76,44 @@ const Login = () => {
     });
 
 	return (
-		<FormikProvider value={formik}>
-        <main className={styles.main}>
-        <section className={styles.inputSection}>
-            <form onSubmit={formik.handleSubmit}>
-                <Field label="Email Address" name="Email" as={FormInput} type="text" asterisk={false} />
-                <Field
-                 label="Password" 
-                 name="Password" 
-                 asterisk={false}
-                  as={FormInput}
-				  type="password"
-				  width="80%"
-                   />
-				   		<p className={styles.para1}>Forgot Password?</p>
+	// 	<FormikProvider value={formik}>
+    //     <main className={styles.main}>
+    //     <section className={styles.inputSection}>
+    //         <form onSubmit={handleSubmit}>
+    //             <Field label="Email Address" name="Email" as={FormInput} type="text" asterisk={false} value={EmailAddress} />
+    //             <Field
+    //              label="Password" 
+    //              name="Password" 
+    //              asterisk={false}
+    //               as={FormInput}
+	// 			  type="password"
+	// 			  width="80%"
+    //                />
+	// 			   		<p className={styles.para1}>Forgot Password?</p>
+	// 			<Button text={isLoading ? 'Sign in...' : 'SIGN IN'} className={styles.btn} disabled={isLoading} />
+	// 			{error && <p className='error'>{error}</p>}
+	// 			{successMessage && <p className='success'>{successMessage}</p>}
+	// 			<p className={styles.para}>
+	// 				Don’t have an account?
+	// 				<Link to='/create-account' className={styles.span}>
+	// 					SIGN UP
+	// 				</Link>
+	// 			</p>
+
+    //         </form>
+           
+    //     </section>
+
+    //     </main>
+        
+    // </FormikProvider>
+		<main className={styles.main}>
+			<section className={styles.inputSection}>
+			<form onSubmit={handleSubmit}>
+			   
+				<Input placeholder='Email' type='email' name='Email' onChange={handleEmail} value={EmailAddress} />
+				<Input placeholder='Password' type='password' name='Password' onChange={handlePassword} value={Password} />
+				<p className={styles.para1}>Forgot Password?</p>
 				<Button text={isLoading ? 'Sign in...' : 'SIGN IN'} className={styles.btn} disabled={isLoading} />
 				{error && <p className='error'>{error}</p>}
 				{successMessage && <p className='success'>{successMessage}</p>}
@@ -99,34 +123,10 @@ const Login = () => {
 						SIGN UP
 					</Link>
 				</p>
-
-            </form>
-           
-        </section>
-
-        </main>
-        
-    </FormikProvider>
-		// <main className={styles.main}>
-		// 	<section className={styles.inputSection}>
-		// 	<form onSubmit={handleSubmit}>
-		// 	   
-		// 		<Input placeholder='Email' type='email' name='Email' onChange={handleEmail} value={EmailAddress} />
-		// 		<Input placeholder='Password' type='password' name='Password' onChange={handlePassword} value={Password} />
-				// <p className={styles.para1}>Forgot Password?</p>
-				// <Button text={isLoading ? 'Sign in...' : 'SIGN IN'} className={styles.btn} disabled={isLoading} />
-				// {error && <p className='error'>{error}</p>}
-				// {successMessage && <p className='success'>{successMessage}</p>}
-				// <p className={styles.para}>
-				// 	Don’t have an account?
-				// 	<Link to='/create-account' className={styles.span}>
-				// 		SIGN UP
-				// 	</Link>
-				// </p>
-		// 	</form>
-		// </section>
+			</form>
+		</section>
 			 
-		// </main>
+		</main>
 		
 	);
 };

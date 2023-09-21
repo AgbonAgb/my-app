@@ -6,7 +6,7 @@ import ModifiedSidebar from '../../components/dashBoard/sidebar';
 import Header from '../../components/dashBoard/header/header';
 
 
-const drawerWidth = 300;
+const drawerWidth = 259
 interface ComponentProps {
     children: React.ReactNode;
 }
@@ -54,8 +54,8 @@ const Main: React.FC<ComponentProps & Props> = ({children,heading, paragraph, wi
                 variant="permanent"
                 sx={{
                     display: { xs: 'none', md: 'block' },
-					'& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth, backgroundColor: "#E1DDFC", marginInlineStart: "0.125rem",
-					borderRadius: "0.5rem", marginBlock: "0.125rem", height: "90vh"
+					'& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth, backgroundColor: "#E1DDFC", marginInlineStart: "2rem",
+					borderRadius: "0.5rem", marginBlock: "0.125rem", height: "90vh",
 				}
                 }}
                 open
@@ -63,7 +63,7 @@ const Main: React.FC<ComponentProps & Props> = ({children,heading, paragraph, wi
                 <ModifiedSidebar/>
             </Drawer>
             
-            <div className={styles.content}>{children}</div>
+            <div className={styles.main}>{children}</div>
         </div>
     );
 }

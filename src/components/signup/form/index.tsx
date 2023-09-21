@@ -100,6 +100,7 @@ const Form = () => {
 
 	return (
 		<Fragment>
+			<main className={styles.main}>
 			<form className={styles.form} onSubmit={handleSubmit}>
 				<section className={styles.inputSection}>
 					<Input
@@ -136,6 +137,9 @@ const Form = () => {
 					</Link>
 				</p>
 			</form>
+
+			</main>
+			
 		</Fragment>
 	);
 };

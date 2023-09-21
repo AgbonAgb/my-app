@@ -19,8 +19,11 @@
     background-color: #ADA7D0
     ;
     padding: 1.8rem;
-    width: 97% !important;
+    width: 100% !important;
     border-radius: 0.8rem;
+    @media (max-width: 540px){
+       width: 100% !important;
+    }
 }
 
 .group {

@@ -1,8 +1,19 @@
-import React from 'react'
+import Table from "./table"
+import styles from "./courseReg.module.scss";
+
 
 const CourseReg = ()=>{
 return(
-    <h1>kjjjjjjjj</h1>
+  <main className={styles.main}>
+    <section className={styles.section}> 
+       <Table/>
+
+    </section>
+    
+
+  </main>
+  
+    
   )
 }
 export default CourseReg;
