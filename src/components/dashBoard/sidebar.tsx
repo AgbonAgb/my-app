@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { ReactComponent as Profile } from '../../../src/svgs/profile.svg';
 import { ReactComponent as Dashboard } from '../../../src/svgs/dashboard.svg';
-import { ReactComponent as CourseIcon } from '../../../src/svgs/courseFormIcon.svg';
+import { ReactComponent as CourseIcon } from '../../../src/svgs/applicationFormIcon.svg';
 import { ReactComponent as ApplicationStatusIcon } from '../../../src/svgs/applicationStatusIcon.svg';
-import { ReactComponent as CourseRegIcon } from '../../../src/svgs/courseFormIcon.svg';
+import { ReactComponent as CourseRegIcon } from '../../../src/svgs/courseReg.svg';
 import { ReactComponent as NotificationIcon } from '../../../src/svgs/notification.svg';
 import { ReactComponent as Logout } from '../../../src/svgs/logoutIcon.svg';
 
@@ -19,8 +19,8 @@ const Sidebar = () => {
 
     let activeStyle = {
         backgroundColor: '#ADA7D0', 
-        color: '#E1DDFC',
-        fill :  "#E1DDFC",
+        color: '#FFFFFF',
+        fill :  "#FFFFFF",
         margin: "0.0625rem",
         borderRadius: "0.5rem",
     }
@@ -49,28 +49,28 @@ const Sidebar = () => {
               
                 
                     <>
-                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboard' className={styles.navLinkStyle}>
+                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashbobard' className={styles.navLinkStyle}>
                             <Dashboard className={styles.iconWrapper}/> <span>Dashboard</span>
                         </NavLink>
 
-                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboard' className={styles.navLinkStyle}>
-                            <CourseIcon className={styles.iconWrapper}/> <span>Course Registration</span>
+                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboardd' className={styles.navLinkStyle}>
+                            <CourseIcon className={styles.iconWrapper}/> <span>Application Form</span>
+                        </NavLink>
+
+                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboarddd' className={styles.navLinkStyle}>
+                            <ApplicationStatusIcon className={styles.iconWrapper}/> <span>Application Status</span>
                         </NavLink>
 
                         <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboard' className={styles.navLinkStyle}>
-                            <Dashboard className={styles.iconWrapper}/> <span>Course Registration</span>
+                            <CourseRegIcon className={styles.iconWrapper}/> <span>Course Registration</span>
                         </NavLink>
 
-                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboard' className={styles.navLinkStyle}>
-                            <Dashboard className={styles.iconWrapper}/> <span>Course Registration</span>
+                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashsboard' className={styles.navLinkStyle}>
+                            <NotificationIcon className={styles.iconWrapper}/> <span>Notification</span>
                         </NavLink>
 
-                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboard' className={styles.navLinkStyle}>
-                            <Dashboard className={styles.iconWrapper}/> <span>Course Registration</span>
-                        </NavLink>
-
-                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboard' className={styles.navLinkStyle}>
-                            <Dashboard className={styles.iconWrapper}/> <span>Course Registration</span>
+                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashsboard' className={styles.navLinkStyle}>
+                            <Logout className={styles.iconWrapper}/> <span>Logout</span>
                         </NavLink>
                        
 

@@ -10,11 +10,11 @@
     text-decoration: none;
 
     &:hover {
-        background-color: #E1DDFC
-        ;  
-        color: #11643C;
+        background-color: #ADA7D0 !important ;  
+        color: #ffff;
     }
 }
+
 
 nav{
     position: relative;
@@ -56,7 +56,8 @@ nav{
     &:active{
         fill: currentColor;
         color: white;
-    }
+    } 
+
 }
 
 
@@ -156,5 +157,5 @@ nav{
     // width: 6.3rem;
     border: 0.05rem solid !important;
     margin: 1.5rem !important;
-    margin-block: 6rem !important
+    margin-block: 3rem !important
 }

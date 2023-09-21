@@ -55,7 +55,7 @@ const Main: React.FC<ComponentProps & Props> = ({children,heading, paragraph, wi
                 sx={{
                     display: { xs: 'none', md: 'block' },
 					'& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth, backgroundColor: "#E1DDFC", marginInlineStart: "2rem",
-					borderRadius: "0.5rem", marginBlock: "0.125rem", height: "90vh",
+					borderRadius: "0.5rem", marginBlock: "0.125rem", height: "100vh",
 				}
                 }}
                 open

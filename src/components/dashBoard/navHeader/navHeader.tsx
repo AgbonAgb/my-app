@@ -12,8 +12,10 @@ import {
   import { ReactComponent as Logout } from "../../../../src/svgs/profile.svg";
   import {  Menu, MenuItem } from "@mui/material";
   import { ReactComponent as ProfileIcon } from "../../../../src/svgs/profile.svg";
+  import { ReactComponent as Search } from "../../../../src/svgs/search.svg";
   import { ReactComponent as Tick } from "../../../../src/svgs/profile.svg";
-  
+  import {AiOutlineSearch as SearchIcon} from 'react-icons/ai';
+  import {IoReload as ReloadIcon} from 'react-icons/io5';
   import { useNavigate } from "react-router-dom";
   
   
@@ -188,7 +190,12 @@ import {
 
         <div  className={styles.groups}>
         <span style={{ fontSize: "1.5rem" }} className={styles.date}>
-            {getDate()}
+        <label className={'searchForm'}>
+                        <span className={'sI'}><SearchIcon/></span>
+                        <input value = {searchData} onChange={(e) => setSearchData1(e.target.value)} type="text" placeholder='Search' />
+                        <button className={'rBtn'} type="submit"><ReloadIcon/></button>
+                    </label>
+            <Search/>
           </span> 
           <span style={{ fontSize: "1.5rem" }} className={styles.date}>
             {getDate()}
@@ -298,3 +305,46 @@ import {
     background-image: url(${(PhotoStyleProps) => PhotoStyleProps?.url});
   `;
   
+  const Section1 = styled('div')`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 46px;
+    & span{
+        font-size: 16px;
+    }
+
+    & .searchWrapper{
+        margin-block-start: 1.6px;
+        display: flex;
+        gap: 10px;
+    }
+
+    & .searchForm{
+        width: 250px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &   .sI{
+        position: absolute;
+        left:7px;
+    }
+
+    &  .rBtn{
+        position: absolute;
+        right:7px;
+        border:none;
+        outline:none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    &   .searchForm > input{
+        width:100%;
+        outline:none;
+        border: 1px solid #E2E4E9;
+        padding:15px 30px 15px 30px;
+        border-radius: 5px;
+}
+`
