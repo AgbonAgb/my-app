@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { ReactComponent as Profile } from '../../../src/svgs/profile.svg';
 import { ReactComponent as Dashboard } from '../../../src/svgs/dashboard.svg';
-
 import styles from './sidebar.module.scss';
+import { Divider } from "@mui/material";
 // import { Divider } from "@mui/material";
 
 
@@ -35,7 +35,7 @@ const Sidebar = () => {
                     </span>
                    
                 </span>
-                {/* <Divider className={styles.divide}/> */}
+                <Divider className={styles.divide}/>
 
               
                 

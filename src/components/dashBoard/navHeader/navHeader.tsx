@@ -8,7 +8,7 @@ import {
   import React, { useEffect, useState } from "react";
   import styles from "./navHeader.module.scss";
   import { ReactComponent as HamburgerMenuIcon } from "../../../../src/svgs/hamburger-menu.svg";
-  import { ReactComponent as NotificationIcon } from "../../../../src/svgs/profile.svg";
+  import { ReactComponent as NotificationIcon } from '../../../../src/svgs/notification.svg';
   import { ReactComponent as Logout } from "../../../../src/svgs/profile.svg";
   import {  Menu, MenuItem } from "@mui/material";
   import { ReactComponent as ProfileIcon } from "../../../../src/svgs/profile.svg";
@@ -153,24 +153,7 @@ import {
                 )} */}
   
       
-                  <div >
-                    <>
-                      <MenuItem
-                        sx={{ width: "100%", gap: "1rem" }}
-                        // onClick={() =>
-                        //   UpdateNotificationHandler(single?.ActivityId)
-                        // }
-                      >
-                        <Tick width={20} />
-                        <span className={styles.notificationmessage}>
-                          {/* {single?.ActivityDescription} */}
-                        </span>
-  
-                       
-                      </MenuItem>
-                      <Divider />
-                    </>
-                  </div>
+          
            
             </div>
           </Menu>
@@ -198,11 +181,29 @@ import {
         >
           <HamburgerMenuIcon className={styles.hamburgerStyle} />
         </IconButton>
-        
 
+        <div className={styles.gab}>
+
+       
+
+        <div  className={styles.groups}>
         <span style={{ fontSize: "1.5rem" }} className={styles.date}>
             {getDate()}
-          </span>
+          </span> 
+          <span style={{ fontSize: "1.5rem" }} className={styles.date}>
+            {getDate()}
+          </span> 
+        </div>
+
+        </div >
+    
+        
+
+        
+
+        {/* <span style={{ fontSize: "1.5rem" }} className={styles.date}>
+            {getDate()}
+          </span> */}
   
         <div className={styles.group}>
           <Tooltip title="Notifications" sx={{ fontSize: "2rem" }}>

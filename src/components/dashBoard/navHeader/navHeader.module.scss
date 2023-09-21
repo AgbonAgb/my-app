@@ -28,6 +28,13 @@
     align-items: center;
     gap: 2rem;
 }
+.groups {
+    display: flex;
+    align-items: center;
+    gap: 19rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 .button{
@@ -102,4 +109,14 @@ white-space: wrap;
     background-color: #CBCED2;
     border: 0.1rem solid #CBCED2;
     }
+}
+.gab{
+    display: flex;
+    justify-content: space-between;
+    margin: -6rem;
+    width: 100%;
+    @media (min-width: 1024) {
+    display: none;
+    }
+
 }
