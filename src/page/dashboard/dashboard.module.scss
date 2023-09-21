@@ -18,7 +18,7 @@
 
 @media (min-width: 912px) {
     .content {
-        padding-inline-start: 30rem;
+        padding-inline-start: 35rem;
         padding-inline-end : 3rem
     }
 }
@@ -46,4 +46,12 @@
         'sidebar main';
     }
 }
+.navHeader {
+    grid-area: header;
+    min-width: 0;
+    // position: fixed!important;
+    width: 100%!important;
+    z-index: 1!important;
+}
+
 

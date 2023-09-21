@@ -7,12 +7,12 @@ import {
   } from "@mui/material";
   import React, { useEffect, useState } from "react";
   import styles from "./navHeader.module.scss";
-  import { ReactComponent as HamburgerMenuIcon } from "../../../../svgs/hamburger-menu.svg";
-  import { ReactComponent as NotificationIcon } from "../../../../svgs/notifications.svg";
-  import { ReactComponent as Logout } from "../../../../svgs/log-out.svg";
+  import { ReactComponent as HamburgerMenuIcon } from "../../../../src/svgs/hamburger-menu.svg";
+  import { ReactComponent as NotificationIcon } from "../../../../src/svgs/profile.svg";
+  import { ReactComponent as Logout } from "../../../../src/svgs/profile.svg";
   import {  Menu, MenuItem } from "@mui/material";
-  import { ReactComponent as ProfileIcon } from "../../../../svgs/profileIcon.svg";
-  import { ReactComponent as Tick } from "../../../../svgs/notifitick.svg";
+  import { ReactComponent as ProfileIcon } from "../../../../src/svgs/profile.svg";
+  import { ReactComponent as Tick } from "../../../../src/svgs/profile.svg";
   
   import { useNavigate } from "react-router-dom";
   
@@ -135,7 +135,7 @@ import {
             }}
             transformOrigin={{ horizontal: "right", vertical: "top" }}
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-            // sx={{width: "50%"}}
+            sx={{width: "50%"}}
           >
             <div>
           
@@ -185,6 +185,7 @@ import {
   
     return (
       <div className={styles.header}>
+      
         <IconButton
           aria-label="open sidebar"
           edge="start"
@@ -197,6 +198,11 @@ import {
         >
           <HamburgerMenuIcon className={styles.hamburgerStyle} />
         </IconButton>
+        
+
+        <span style={{ fontSize: "1.5rem" }} className={styles.date}>
+            {getDate()}
+          </span>
   
         <div className={styles.group}>
           <Tooltip title="Notifications" sx={{ fontSize: "2rem" }}>
@@ -212,6 +218,7 @@ import {
   
           
           </Tooltip>
+          
   
           <NotificationMenu />
   
@@ -267,9 +274,7 @@ import {
             </MenuItem>
           </Menu>
   
-          <span style={{ fontSize: "1.5rem" }} className={styles.date}>
-            {getDate()}
-          </span>
+          
         </div>
       </div>
     );

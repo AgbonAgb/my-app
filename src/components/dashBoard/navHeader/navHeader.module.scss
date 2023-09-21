@@ -1,5 +1,5 @@
 .hamburgerStyle {
-    color: #11643C;
+    color: #ffff !important;
     width: 4rem;
     height: 8rem;
     margin-inline-start: 2rem;
@@ -16,8 +16,11 @@
     gap: 1.183rem;
     height: 6rem;
     justify-content: space-between;
-    background-color: #D9EBCC;
+    background-color: #ADA7D0
+    ;
     padding: 1.8rem;
+    width: 97% !important;
+    border-radius: 0.8rem;
 }
 
 .group {

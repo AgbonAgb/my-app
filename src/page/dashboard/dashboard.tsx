@@ -1,12 +1,12 @@
 import { Drawer } from '@mui/material';
 import { useState } from 'react';
-// import NavHeader from '../../components/dashBoard/navbar/navbar';
+import NavHeader from '../../components/dashBoard/navHeader/navHeader';
 import styles from './dashboard.module.scss';
 import ModifiedSidebar from '../../components/dashBoard/sidebar';
 import Header from '../../components/dashBoard/header/header';
 
 
-const drawerWidth = 259;
+const drawerWidth = 300;
 interface ComponentProps {
     children: React.ReactNode;
 }
@@ -28,6 +28,9 @@ const Main: React.FC<ComponentProps & Props> = ({children,heading, paragraph, wi
         <div  className={styles.container}>
 
             {/* <NavHeader handleSidebarToggle={handleSidebarToggle}/> */}
+			<div className={styles.navHeader}>
+                <NavHeader handleSidebarToggle={handleSidebarToggle} />
+            </div>
 			<div className={styles.header}>
                 <Header heading={heading} paragraph={paragraph}/>
             </div>
