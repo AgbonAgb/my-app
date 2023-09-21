@@ -190,12 +190,15 @@ import {
 
         <div  className={styles.groups}>
         <span style={{ fontSize: "1.5rem" }} className={styles.date}>
-        <label className={'searchForm'}>
+          <Section1>
+            <label className={'searchForm'}>
                         <span className={'sI'}><SearchIcon/></span>
-                        <input value = {searchData} onChange={(e) => setSearchData1(e.target.value)} type="text" placeholder='Search' />
-                        <button className={'rBtn'} type="submit"><ReloadIcon/></button>
-                    </label>
-            <Search/>
+                        <input  type="text" placeholder='Search' />
+                        {/* <button className={'rBtn'} type="submit"><ReloadIcon/></button> */}
+            </label>
+
+          </Section1>
+     
           </span> 
           <span style={{ fontSize: "1.5rem" }} className={styles.date}>
             {getDate()}
@@ -309,7 +312,6 @@ import {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 46px;
     & span{
         font-size: 16px;
     }
