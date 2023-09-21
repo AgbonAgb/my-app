@@ -1,15 +1,15 @@
 .main {
     /*margin-block-start: 63px;
     margin-block-end: 95px;*/
-    padding-block: 63px 95px;
-    padding-inline: 220px; //main form from side
+    padding-block: 6.3rem 9.5rem;
+    padding-inline: 2.20rem; //main form from side
     //background-color: orange;
 }
 
 .ecclipseLeft {
     position: fixed;
     left: 0;
-    top: 131px;
+    top: 13.1rem;
     z-index: -1;
 }
 
@@ -23,23 +23,23 @@
 .heading {
     color: var(--yellow-black, #302711);
     font-family: Montserrat;
-    font-size: 64px;
+    font-size: 6.4rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-align: center;
-    margin-block-end: 20px;
+    margin-block-end: 2rem;
 }
 
 .subheading {
     color: var(--yellow-black, #302711);
     font-family: Montserrat;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-align: center;
-    margin-block-end: 50px;
+    margin-block-end: 5rem;
 }
 
 .layout {

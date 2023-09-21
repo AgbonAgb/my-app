@@ -15,8 +15,8 @@ const Sidebar = () => {
         backgroundColor: '#ADA7D0', 
         color: '#E1DDFC',
         fill :  "#E1DDFC",
-        margin: "1rem",
-        borderRadius: "0.8rem",
+        margin: "0.0625rem",
+        borderRadius: "0.5rem",
     }
 
     

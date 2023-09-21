@@ -1,9 +1,9 @@
 .section {
-	max-width: 70rem;
+	max-width: 11.2rem;
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
-	padding: 5.75rem 6.5rem 8.5625rem 6.5rem;
+	padding: 9.1rem 10.4rem 13.7rem 10.4rem;
 	justify-content: center;
 	align-items: center;
 	margin-inline: auto;
@@ -15,46 +15,46 @@
 .heading {
 	display: flex;
 	align-items: center;
-	gap: 0.75rem;
+	gap: 1.2rem;
 	/*space between welcome image and message;*/
 	/*this makes image and text to be on same line*/
 	color: #574d90;
 	font-family: Montserrat;
-	font-size: 2.25rem;
+	font-size: 3.6rem;
 	/*font-style: normal;*/
 	font-weight: 700;
-	line-height: 2.75rem;
+	line-height: 4.4rem;
 	/* 122.222% */
-	margin-block-end: 1rem;
+	margin-block-end: 1.6rem;
 	/* space btw text up and down */
 }
 
 .welcomeicon {
 	/* Icon height and width */
-	width: 3.48213rem;
-	height: 3.75rem;
+	width: 5.6rem;
+	height: 6rem;
 }
 
 .nairaicon {
-	width: 1.33331rem;
-	height: 1.25rem;
+	width: 2.1rem;
+	height: 2rem;
 }
 
 .para {
 	color: #011602;
 	text-align: center;
 	font-family: Montserrat;
-	font-size: 1.25rem;
+	font-size: 2rem;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 2.75rem;
+	line-height: 4.4rem;
 	/* 220% */
-	margin-block-end: 1rem;
+	margin-block-end: 1.6rem;
 }
 
 .para2 {
 	display: flex;
-	width: 34.8125rem;
+	width: 55.7rem;
 	justify-content: center;
 	align-items: center;
 }
@@ -65,10 +65,10 @@
 	color: #011602;
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
-	font-size: 1.5rem;
+	font-size: 2.4rem;
 	font-weight: 700;
-	letter-spacing: -0.015rem;
-	gap: 0.8rem;
+	letter-spacing: -0.24rem;
+	gap: 1.2rem;
 }
 
 .amount {
@@ -76,29 +76,29 @@
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: Montserrat;
-	font-size: 1.5rem;
+	font-size: 2.4rem;
 	font-weight: 700;
-	letter-spacing: -0.015rem;
+	letter-spacing: -0.24rem;
 }
 .arrow {
-	height: 1.25rem;
+	height: 2rem;
 	flex-shrink: 0;
 }
 
 .ctndb {
 	color: #574d90;
 	font-family: Montserrat;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 2.5rem;
+	line-height: 4rem;
 	position: relative;
 
 	// width and height of the pseudo element is what gives the line property
 	&::before {
 		content: '';
 		bottom: 0;
-		left: 0.8rem;
+		left: 1.28rem;
 		position: absolute;
 		width: 90%;
 		height: 0.125rem;
@@ -108,16 +108,16 @@
 
 .btn {
 	display: flex;
-	gap: 1.25rem;
+	gap: 2rem;
 	align-items: center;
-	height: 3.5rem;
-	padding: 0.5rem 8.71875rem;
+	height: 5.6rem;
+	padding: 0.8rem 13.95rem;
 
-	border-radius: 0.25rem;
+	border-radius: 0.4rem;
 	background: #574d90;
 
-	margin-block-start: 3.75rem;
-	margin-block-end: 1rem;
+	margin-block-start: 6rem;
+	margin-block-end: 1.6rem;
 
 	/*Button Text */
 	color: #fff;
