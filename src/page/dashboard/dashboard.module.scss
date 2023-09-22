@@ -29,7 +29,7 @@
     margin-inline: 0rem;
 }
 .container {
-    margin-inline:2rem;
+    
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
@@ -40,11 +40,13 @@
         'main';
     
     @media screen and (min-width: 900px) {
+        margin-inline:2rem;
         grid-template-columns: 27.8rem 1fr;
         grid-template-rows: auto 1fr;
         grid-template-areas: 
         'sidebar header'
         'sidebar main';
+        
     }
 }
 .navHeader {
