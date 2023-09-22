@@ -37,48 +37,8 @@ const DenseTable = () => {
       unit: "2 units",
       lecturer: "Mr. peter ojo",
     },
-    {
-      course: "computer science",
-      code: "csc",
-      unit: "2 units",
-      lecturer: "Mr. peter ojo",
-    },
-    {
-      course: "computer science",
-      code: "csc",
-      unit: "2 units",
-      lecturer: "Mr. peter ojo",
-    },
-      {
-      course: "computer science",
-      code: "csc",
-      unit: "2 units",
-      lecturer: "Mr. peter ojo",
-    },
-    {
-      course: "computer science",
-      code: "csc",
-      unit: "2 units",
-      lecturer: "Mr. peter ojo",
-    },
-    {
-      course: "computer science",
-      code: "csc",
-      unit: "2 units",
-      lecturer: "Mr. peter ojo",
-    },
-    {
-      course: "computer science",
-      code: "csc",
-      unit: "2 units",
-      lecturer: "Mr. peter ojo",
-    },
-    {
-      course: "computer science",
-      code: "csc",
-      unit: "2 units",
-      lecturer: "Mr. peter ojo",
-    },
+    
+
   ];
 
   const tableRow =
@@ -110,7 +70,7 @@ const DenseTable = () => {
         <StyledTableHead>
           <TableRow>
 		  
-            <TableCell style={{marginInlineStart: "2rem"}}>COURSES </TableCell>
+            <TableCell style={{paddingInlineStart: "3rem"}}>COURSES </TableCell>
             <TableCell>CODE</TableCell>
             <TableCell>UNITS</TableCell>
             <TableCell>LECTURER</TableCell>

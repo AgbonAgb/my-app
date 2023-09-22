@@ -200,7 +200,7 @@ import {
           </Section1>
      
           </span> 
-          <span style={{ fontSize: "1.5rem" }} className={styles.date}>
+          <span style={{ fontSize: "1.5rem" }} className={styles.dates}>
             {getDate()}
           </span> 
         </div>

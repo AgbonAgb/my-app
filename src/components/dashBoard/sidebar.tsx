@@ -36,7 +36,7 @@ const Sidebar = () => {
                     <span className={styles.userName}>
                         <div>
                             <p className={styles.name}>Godwin Agbon</p>
-                            <p className={styles.occupation}>djdj</p>
+                            <p className={styles.occupation}>Student</p>
                         </div>
                     </span>
                    
