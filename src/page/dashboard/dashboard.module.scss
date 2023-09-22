@@ -52,9 +52,15 @@
 .navHeader {
     grid-area: header;
     min-width: 0;
-    // position: fixed!important;
+    position: fixed!important;
     width: 100%!important;
     z-index: 1!important;
+    @media screen and (min-width: 1024px) {
+        
+        width: 80% !important;
+        margin-inline-start: 27rem !important;
+    }
+
 }
 .main {
     grid-area: main;
