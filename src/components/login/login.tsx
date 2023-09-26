@@ -18,7 +18,7 @@ const Login = () => {
 
 	useEffect(() => {
 		if (token) {
-			navigate('/dashboard');
+			navigate('/course-registration');
 		}
 	}, [token]);
 

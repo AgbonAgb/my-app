@@ -43,6 +43,7 @@ const Sidebar = () => {
                 </span>
                 <Divider className={styles.divide}/>
 
+
               
                 
             
@@ -53,7 +54,9 @@ const Sidebar = () => {
                             <Dashboard className={styles.iconWrapper}/> <span>Dashboard</span>
                         </NavLink>
 
-                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboardd' className={styles.navLinkStyle}>
+                      
+
+                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/course-registration' className={styles.navLinkStyle}>
                             <CourseIcon className={styles.iconWrapper}/> <span>Application Form</span>
                         </NavLink>
 
@@ -61,7 +64,7 @@ const Sidebar = () => {
                             <ApplicationStatusIcon className={styles.iconWrapper}/> <span>Application Status</span>
                         </NavLink>
 
-                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/dashboard' className={styles.navLinkStyle}>
+                        <NavLink style={({isActive}) => isActive ? activeStyle : undefined} to='/course-registration' className={styles.navLinkStyle}>
                             <CourseRegIcon className={styles.iconWrapper}/> <span>Course Registration</span>
                         </NavLink>
 

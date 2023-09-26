@@ -308,7 +308,7 @@ import {
     background-image: url(${(PhotoStyleProps) => PhotoStyleProps?.url});
   `;
   
-  const Section1 = styled('div')`
+   const Section1 = styled('div')`
     display: flex;
     justify-content: space-between;
     align-items: center;

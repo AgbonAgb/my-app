@@ -13,7 +13,7 @@ function App() {
 			<Route element={<Login />} path='/login' />
 			<Route element={<Welcomback />} path='/welcomback' />
 			<Route element={<Creataccount />} path='/create-account' />
-			<Route element={<CourseReg />} path='/dashboard' />
+			<Route element={<CourseReg />} path='/course-registration' />
 		</Routes>
 	);
 }

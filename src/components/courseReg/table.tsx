@@ -11,14 +11,14 @@ import Radio from '@mui/material/Radio';
 
 
 const DenseTable = () => {
-  interface DogBreed {
+   interface Course {
     course: string;
     code: string;
     unit: string;
     lecturer: string;
   }
 
-  const dogBreeds: DogBreed[] = [
+    const course: Course[] = [
     {
       course: "computer science",
       code: "csc",
@@ -42,8 +42,8 @@ const DenseTable = () => {
   ];
 
   const tableRow =
-    dogBreeds &&
-    dogBreeds?.map((item) => (
+  course &&
+  course?.map((item) => (
       <>
         <TableRow
           sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

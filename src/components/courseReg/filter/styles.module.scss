@@ -1,0 +1,67 @@
+.container{
+    position: relative;
+}
+
+.container > .btn{
+    outline:none;
+    padding:15px 10px;
+    border-radius: 6px;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    cursor: pointer;
+    width:100%;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.wrapper{
+    position: fixed;
+    z-index: 1000;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    /* background-color: rgba(0,0,0,0.4); */
+    background-color: transparent;
+}
+
+.drop, .drop1 {
+    min-width:220px;
+    position:absolute;
+    top:50px;
+    right:0;
+    z-index: 1001;
+    background-color: var(--white-color);
+    padding:10px 0px;
+    border-radius: 7px;
+    border:1px solid #eee !important;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.drop1 {
+    width: 100%;
+}
+
+.drop > div{
+    padding:10px 20px;
+    cursor: pointer;
+}
+.drop > div:hover{
+    background-color: #F1F1F1;
+}
+.drop > div:active{
+    background-color: #F1F1F1 !important;
+}
+
+.drop1 > div{
+    padding:10px 20px;
+    cursor: pointer;
+}
+.drop1 > div:hover{
+    background-color: #F1F1F1;
+}
+.drop1 > div:active{
+    background-color: #F1F1F1 !important;
+}
