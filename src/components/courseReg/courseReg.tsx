@@ -38,9 +38,7 @@ const CourseReg = ()=>{
   const handleOpenVendorModal = () => {
     setList(!list);
     // setIsOpen(false);
-    console.log(list, "listzs")
   };
-console.log(semester)
   
 return(
   <main className={styles.main}>
@@ -51,7 +49,7 @@ return(
     
     <div   className={styles.headingMain}>
     <div className={styles.dropdown} onClick={handleOpenVendorModal}>
-      <span className={styles.Semester} >{semester == "" ? "Semester 1" : semester}</span>
+      <span className={styles.Semester} >{semester === "" ? "Semester 1" : semester}</span>
       <DropdownIcon className={list? "" : styles.rotateArrow}/>
     </div>
     </div>

@@ -31,16 +31,16 @@ nav{
     pointer-events: none;
 }
 
-.footerLinkStyle {
-    margin-block: 1rem;
-    cursor: pointer;
-}
+// .footerLinkStyle {
+//     margin-block: 1rem;
+//     cursor: pointer;
+// }
 
-.navStyle {
-    border-right: 1px solid #E1DDFC
-    ;
-    height: 100vh;
-}
+// .navStyle {
+//     border-right: 1px solid #E1DDFC
+//     ;
+//     height: 100vh;
+// }
 
 .wrapper {
     display: flex;
@@ -86,55 +86,55 @@ nav{
     margin-block-end: 2rem; 
 }
 
-.photoWrapper {
-    display: block;
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: left;
-    width: 11.2rem;
-    height: 11.2rem;
-    margin-block-end: 3.038rem;
-    // background-image: url('../../../../svgs/profilePicture.svg'); 
-    position: relative;
-}
+// .photoWrapper {
+//     display: block;
+//     background-size: contain; 
+//     background-repeat: no-repeat;
+//     background-position: left;
+//     width: 11.2rem;
+//     height: 11.2rem;
+//     margin-block-end: 3.038rem;
+//     // background-image: url('../../../../svgs/profilePicture.svg'); 
+//     position: relative;
+// }
 
-.sidebarText1 {
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 2.7rem;
-    color: #11643C;
-    // margin-block-start: 1rem;
-}
+// .sidebarText1 {
+//     font-weight: 500;
+//     font-size: 1.8rem;
+//     line-height: 2.7rem;
+//     color: #11643C;
+//     // margin-block-start: 1rem;
+// }
 
-.sidebarText2 {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: #011C34;
-    margin-block-end: 4rem;
-}
+// .sidebarText2 {
+//     font-weight: 400;
+//     font-size: 12px;
+//     line-height: 18px;
+//     color: #011C34;
+//     margin-block-end: 4rem;
+// }
 
-.logoStyle {
-    width: 10.278rem;
-    height: 10rem;
-    margin-block-start: 4.6rem;
-}
+// .logoStyle {
+//     width: 10.278rem;
+//     height: 10rem;
+//     margin-block-start: 4.6rem;
+// }
 
-.photoBorder {
-    width: 11.2rem;
-    height: 11.2rem;
-    margin-block-start: 4rem;
-}
+// .photoBorder {
+//     width: 11.2rem;
+//     height: 11.2rem;
+//     margin-block-start: 4rem;
+// }
 
-.photoStyle {
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-    background-color: #8DC467;
-    position: absolute;
-    top: 0.8rem;
-    left: 0.3rem;
-}
+// .photoStyle {
+//     width: 90%;
+//     height: 90%;
+//     border-radius: 50%;
+//     background-color: #8DC467;
+//     position: absolute;
+//     top: 0.8rem;
+//     left: 0.3rem;
+// }
 .userName{
     // font-size: 2rem;
     margin-bottom: 4rem;

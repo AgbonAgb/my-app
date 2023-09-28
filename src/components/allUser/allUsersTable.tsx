@@ -5,7 +5,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import { TableHead, styled } from "@mui/material";
 import Button from "../../custom/button/button";
-import styles from "./courseReg.module.scss";
+import styles from "./allUsers.module.scss";
 import CheckBox from '@mui/material/Checkbox';
 import { useState } from "react";
 interface Course {
@@ -24,15 +24,15 @@ const DenseTable = () => {
     const course: Course[] = [
     {
       id:"1",
-      course: "computer science",
-      code: "csc",
+      course: "",
+      code: "sekoni olajumoke",
       unit: "2 units",
       lecturer: "Mr. peter ojo",
     },
     {
       id:"2",
       course: "computer science",
-      code: "csc",
+      code: "sekoni olajumoke",
       unit: "2 units",
       lecturer: "Mr. peter ojo",
     },
@@ -53,10 +53,7 @@ const DenseTable = () => {
     if(!checked ){
         setIsCheck(isCheck.filter(item => item !== id));
     }
-
-    console.log(checked, "cjedn")
 }
-console.log(isCheck, "cjedn")
 
 
   const tableRow =
@@ -68,10 +65,10 @@ console.log(isCheck, "cjedn")
           key={item?.course}
         >
 			
-          <StyledCell><CheckBox onChange={handleClick}  id={item?.id} checked={isCheck.includes(item?.id)} className={styles.radio}/>{ item?.course || "N/A"}</StyledCell>
-          <StyledCell>{item?.code || "N/A"}</StyledCell>
-          <StyledCell>{item?.unit || "N/A"}</StyledCell>
-          <StyledCell>{item?.lecturer || "N/A"}</StyledCell>\
+          {/* <StyledCell><CheckBox onChange={handleClick}  id={item?.id} checked={isCheck.includes(item?.id)} className={styles.radio}/>{ item?.course || "N/A"}</StyledCell> */}
+          <StyledCell>{item?.code || "N/A"} </StyledCell>
+          <StyledCell><Button className={styles.width} text="Update"/> </StyledCell>
+          <StyledCell><Button className={styles.width} text="Delete"/></StyledCell>
         </TableRow>
 
         
@@ -88,18 +85,12 @@ console.log(isCheck, "cjedn")
         <StyledTableHead>
           <TableRow>
 		  
-            <TableCell style={{paddingInlineStart: "3rem"}}>COURSES </TableCell>
-            <TableCell>CODE</TableCell>
-            <TableCell>UNITS</TableCell>
-            <TableCell>LECTURER</TableCell>
+            <TableCell>All Users</TableCell>
+            <TableCell>Actions</TableCell>
           </TableRow>
         </StyledTableHead>
         <TableBody>{tableRow}</TableBody>
       </Table>
-	  <div   className={styles.headingMain}>
-	  <Button text="REGISTER COURSES" className={styles.btn} disabled={true} />
-
-	  </div>
 	
 
       <style>{`@page { margin:2rem !important; }`}</style>

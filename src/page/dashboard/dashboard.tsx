@@ -27,7 +27,6 @@ const Main: React.FC<ComponentProps & Props> = ({children,heading, paragraph, wi
     return (
         <div  className={styles.container}>
 
-            {/* <NavHeader handleSidebarToggle={handleSidebarToggle}/> */}
 			<div className={styles.navHeader}>
                 <NavHeader handleSidebarToggle={handleSidebarToggle} />
             </div>

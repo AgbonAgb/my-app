@@ -89,37 +89,37 @@
   }
 }
 
-.printButton {
-  height: 5.2rem;
-  background-color: #11643c;
-  border: 0.1rem solid #11643c;
+// .printButton {
+//   height: 5.2rem;
+//   background-color: #11643c;
+//   border: 0.1rem solid #11643c;
 
-  border-radius: 0.4rem;
-  padding-inline: 0.6rem;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
+//   border-radius: 0.4rem;
+//   padding-inline: 0.6rem;
+//   color: #ffffff;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   cursor: pointer;
 
-  @media (max-width: 767px) {
-    width: 10rem;
-  }
+//   @media (max-width: 767px) {
+//     width: 10rem;
+//   }
 
-  &:active {
-    background-color: #11643c;
-    border: 0.1rem solid #11643c;
-  }
+//   &:active {
+//     background-color: #11643c;
+//     border: 0.1rem solid #11643c;
+//   }
 
-  &:focus {
-    background-color: #11643c;
-    border: 0.1rem solid #11643c;
-  }
-  &:disabled {
-    background-color: #cbced2;
-    border: 0.1rem solid #cbced2;
-  }
-}
+//   &:focus {
+//     background-color: #11643c;
+//     border: 0.1rem solid #11643c;
+//   }
+//   &:disabled {
+//     background-color: #cbced2;
+//     border: 0.1rem solid #cbced2;
+//   }
+// }
 .gab {
   display: flex;
   justify-content: space-between;

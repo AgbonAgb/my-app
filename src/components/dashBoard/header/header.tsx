@@ -1,4 +1,3 @@
-import { main } from '@popperjs/core';
 import styles from './header.module.scss'
 interface ComponentProps {
     heading?: string;
