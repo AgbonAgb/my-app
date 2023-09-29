@@ -8,8 +8,8 @@ import { ChangeEvent, FormEvent, useState, useEffect } from 'react';
 import { request } from '../utils/apiCall';
 import { useNavigate } from 'react-router-dom';
 import { Field, FormikProvider, FormikValues, useFormik } from 'formik';
-// import apiCall2 from '../utils/apiCall2';
-// import { useMutation, useQuery } from "@tanstack/react-query";
+import apiCall2 from '../utils/apiCall2';
+import { useMutation, useQuery } from "@tanstack/react-query";
 
 interface LoginPayload {
     Email: string;
