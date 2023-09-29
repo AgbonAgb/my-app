@@ -1,20 +1,24 @@
 import styles from './styles.module.scss';
-import Welocome from '../../assets/welcome-icon.jpg';
 import { Link, useNavigate } from 'react-router-dom';
-import Say from '../../say';
+import Button from '../../custom/button/styledButton/styledButton';
+import { ReactComponent as WelcomeIcon} from '../../assets/welcome.svg';
+// import Button from "../../custom/button/button";
 
 const Welcome = () => {
-	// const navigate = useNavigate();
+	const navigate = useNavigate();
 
-	// const handleNavigate = () => {
-	// 	navigate('/create-account');
-	// };
+	const handleNavigate = () => {
+		navigate('/create-account');
+		console.log("aaa")
+	};
 
 	return (
-		<section className={styles.section}>
+		<main className={styles.main}>
+					<section className={styles.section}>
 			<article className={styles.article}>
 				<h1 className={styles.heading}>
-					<img src={Welocome} className={styles.welcomeIcon} />
+				<WelcomeIcon className={styles.welcomeIcon} />
+					{/* <img src={Welocome} className={styles.welcomeIcon} /> */}
 					WELCOME GODWIN!
 				</h1>
 				<p className={styles.para}>
@@ -22,10 +26,21 @@ const Welcome = () => {
 				</p>
 			</article>
 
-			<Link className={styles.btn} to='/create-account'>
+			{/* <Link className={styles.btn} to='/create-account'>
 				CONTINUE TO DASHBOARD
-			</Link>
+			</Link> */}
+
+            {/* <div  className={styles.section2}>
+			    <Button className={styles.btn} text="PROCEED TO PAYMENT" />
+		    </div> */}
+
+            <div  className={styles.section2}>
+			    <Button className={styles.btn} onClick={()=>{handleNavigate()}} text="CONTINUE TO DASHBOARD" />
+		    </div>
 		</section>
+
+		</main>
+
 	);
 };
 

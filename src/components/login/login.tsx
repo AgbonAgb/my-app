@@ -8,6 +8,14 @@ import { ChangeEvent, FormEvent, useState, useEffect } from 'react';
 import { request } from '../utils/apiCall';
 import { useNavigate } from 'react-router-dom';
 import { Field, FormikProvider, FormikValues, useFormik } from 'formik';
+// import apiCall2 from '../utils/apiCall2';
+// import { useMutation, useQuery } from "@tanstack/react-query";
+
+interface LoginPayload {
+    Email: string;
+    Password: string;
+}
+
 
 const Login = () => {
 	const navigate = useNavigate();
@@ -62,6 +70,52 @@ const Login = () => {
 			setIsLoading(false);
 		}
 	};
+
+	// const login = async (payload: LoginPayload) => {
+    //     return (await (apiCall2().post('/Applicant/login', payload)))?.data as any;
+    // }
+    // const loginMutation = useMutation(['login'], login, {retry: 0});
+
+
+    // const signInHandler = async (values: FormikValues, resetForm: () => void) => {
+    //     const loginPayload : LoginPayload = {
+    //       Email: values.Email.trim(),
+    //       Password: values.Password.trim()
+    //     }
+    //     setIsLoading(true);
+    //     try {  
+    //       await loginMutation.mutateAsync(loginPayload, {
+    //         onSuccess: (data) => {   
+
+    //             // showNotification({
+    //             //     message: 'User Log in successful',
+    //             //     type: 'success',
+    //             // });
+    //             localStorage.setItem('token', data.token)
+    //             // dispatch(updateUserDetails({
+    //             //   Token: data?.Data?.Token,
+    //             //     MemberId: data?.Data?.MemberId,
+    //             //     Expiration: data?.Data?.Expiration,
+    //             //     IsNewApplicant: data?.Data?.IsNewApplicant,
+    //             //     MembershipTypeId:data?.Data?.MembershipTypeId,
+    //             // }))
+           
+               
+    //         },
+
+    //     });
+    //         }
+    //      catch (error: any) {
+    //         // showNotification({
+    //         //     message: error?.response?.data?.Message || error?.message,
+    //         //     type: 'error'
+    //         // });
+    //         setIsLoading(false);
+    //     }
+    //   }
+
+
+	
 
 	const formik = useFormik<FormikValues>({
         initialValues: {
