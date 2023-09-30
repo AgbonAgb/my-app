@@ -51,6 +51,7 @@ const Login = () => {
 
 		try {
 			const token = (await request.post('/Authentication/Authenticate', LoginDto))?.data as string;
+			console.log(token);
 			localStorage.setItem('token', token);
 			setToken(token);
 			setSuccessMessage('User Login successful');

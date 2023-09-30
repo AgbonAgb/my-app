@@ -22,6 +22,13 @@
 html,
 body {
 	height: 100%;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--color-main-bg);
+	//this made it possible for us to divide px by 10 and not 16
+	font-size: 62.5%;
 }
 
 /*
