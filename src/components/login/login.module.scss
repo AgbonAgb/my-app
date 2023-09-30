@@ -58,6 +58,11 @@
 	font-size: 2rem;
 	font-style: normal;
 	margin-inline-start: 1.6rem;
+	display: flex;
+	@media (max-width: 480px){
+		font-size: 1.5rem;
+		justify-content: space-between;
+    }
 }
 
 .span {
@@ -67,4 +72,20 @@
 	font-style: normal;
 	font-weight: 700;
 	display: inline-block;
+	@media (max-width: 480px){
+		font-size: 1.5rem;
+	
+    }
 }
+
+.button {
+	display: flex;
+	justify-content: center;
+	padding-block: 13px;
+	margin-bottom: 16px;
+	font-family: Montserrat !important;
+	margin-block: 4rem !important;
+  }
+  .button:hover {
+	color: #fff;
+  }
