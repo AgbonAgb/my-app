@@ -4,7 +4,7 @@ import Button from '../../custom/button/button';
 import { Link } from 'react-router-dom';
 import { ChangeEvent, FormEvent, useState, useEffect } from 'react';
 //import { request } from '../utils/apiCall';
-import { request } from '../utils/apiCall';
+import { request } from '../../utils/apiCall';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -51,7 +51,6 @@ const Login = () => {
 
 		try {
 			const token = (await request.post('/Authentication/Authenticate', LoginDto))?.data as string;
-			console.log(token);
 			localStorage.setItem('token', token);
 			setToken(token);
 			setSuccessMessage('User Login successful');
