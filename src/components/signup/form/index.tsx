@@ -2,7 +2,7 @@ import { ChangeEvent, FormEvent, MouseEvent, useState, Fragment } from 'react';
 import styles from './index.module.scss';
 import Input from '../../../custom/input/input';
 import Button from '../../../custom/button/button';
-import { request } from '../../utils/apiCall';
+import { request } from '../../../utils/apiCall';
 import { Link } from 'react-router-dom';
 
 interface Person {
@@ -115,7 +115,10 @@ const Form = () => {
 					<Input placeholder='Phone Number' type='text' name='PhoneNumber' onChange={handlePhone} value={PhoneNumber} />
 					<Input
 						placeholder='Email Address'
-						type='email' name='EmailAddress' onChange={handleEmail} value={EmailAddress}
+						type='email'
+						name='EmailAddress'
+						onChange={handleEmail}
+						value={EmailAddress}
 					/>
 					<Input placeholder='Password' type='password' name='Password' onChange={handlePassword} value={Password} />
 					<Input
