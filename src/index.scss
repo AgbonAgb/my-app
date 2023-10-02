@@ -2,32 +2,12 @@
 
 #root{
 	height: 100%;
-<<<<<<< HEAD
-	margin: 0;
-	font-family: 'Poppins', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: var(--color-main-bg);
-	//this made it possible for us to divide px by 10 and not 16
-	font-size: 62.5%;
-}
-
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
-body {
-	line-height: 1.5;
-	font-family: 'Montserrat', sans-serif;
-=======
   }
   
   body,html {
 	height: 100%;
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--color-main-bg);
@@ -94,15 +74,6 @@ body {
   }
   .star{
 	color: red;
-<<<<<<< HEAD
-	font-size: calc(18rem / 16);
-	margin-block-end: 1.1rem;
-	margin-inline: auto;
-}
-
-.success {
-=======
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 	font-weight: 700;
   }
   .labelDiv{

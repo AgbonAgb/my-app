@@ -1,15 +1,15 @@
 import Table from "./table"
 import styles from "./courseReg.module.scss";
 import { ReactComponent as DropdownIcon } from '../../../src/svgs/dropdownIcon.svg';
-<<<<<<< HEAD
 
 
-const CourseReg = ()=>{
-=======
 import { Button } from "@mui/material";
-import { useState } from "react";
+// import { useState } from "react";
 import styles2 from './filter/styles.module.scss';
-import Buttons from "../../custom/button/button";
+import { useState } from "react";
+// import Button from "../../custom/button/button";
+import Buttons from "../../custom/button/styledButton/main.module.scss";
+
 
 
 const CourseReg = ()=>{
@@ -46,7 +46,6 @@ const CourseReg = ()=>{
     // setIsOpen(false);
   };
   
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 return(
   <main className={styles.main}>
     <section className={styles.section}> 
@@ -55,15 +54,6 @@ return(
     </div>
     
     <div   className={styles.headingMain}>
-<<<<<<< HEAD
-    <div className={styles.dropdown}>
-      <span className={styles.Semester}>Semester 1</span>
-      <DropdownIcon/>
-    </div>
-    </div>
-
-       <Table/>
-=======
     <div className={styles.dropdown} onClick={handleOpenVendorModal}>
       <span className={styles.Semester} >{semester === "" ? "Semester 1" : semester}</span>
       <DropdownIcon className={list? "" : styles.rotateArrow}/>
@@ -108,7 +98,6 @@ return(
        <Table/>
        <Buttons text="REGISTER COURSES" className={styles.btn} disabled={true} />
 
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 
     </section>
     
