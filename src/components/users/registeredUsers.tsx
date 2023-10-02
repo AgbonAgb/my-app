@@ -24,7 +24,7 @@ const RegUsers = () => {
 	const handleOpenEditModal = ()=>{
 		SetOpenEditModal(true)
 	}
-	const notifier = require('node-notifier'); 
+	
 
 
 	useEffect(() => {
@@ -40,11 +40,7 @@ const RegUsers = () => {
 		try {
 			await request.delete(`Authentication/DeleteUser?UserId=${userId}`);
 			// notify the user is deleted with an npm notification package
-			notifier.notify({
-				title: 'My Notification',
-				message: 'deleted succesfully.'
-			  });
-			  
+			
 
 			setUserChange('user is deleted');
 		} catch (error) {

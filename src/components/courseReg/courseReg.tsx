@@ -1,9 +1,52 @@
 import Table from "./table"
 import styles from "./courseReg.module.scss";
 import { ReactComponent as DropdownIcon } from '../../../src/svgs/dropdownIcon.svg';
+<<<<<<< HEAD
 
 
 const CourseReg = ()=>{
+=======
+import { Button } from "@mui/material";
+import { useState } from "react";
+import styles2 from './filter/styles.module.scss';
+import Buttons from "../../custom/button/button";
+
+
+const CourseReg = ()=>{
+  const [list, setList] = useState(false)
+  const [semester, setSemester] = useState(" Semester 1")
+
+  interface Course {
+    id: number;
+    code: string;
+    unit: string;
+    lecturer: string;
+  }
+
+    const options: Course[] = [
+    {
+      id: 1,
+      code: "Semester 1",
+      unit: "2 units",
+      lecturer: "Mr. peter ojo",
+    },
+    {
+      id: 2,
+      code: "Semester 2",
+      unit: "2 units",
+      lecturer: "Mr. peter ojo",
+    },
+
+    
+
+  ];
+
+  const handleOpenVendorModal = () => {
+    setList(!list);
+    // setIsOpen(false);
+  };
+  
+>>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 return(
   <main className={styles.main}>
     <section className={styles.section}> 
@@ -12,6 +55,7 @@ return(
     </div>
     
     <div   className={styles.headingMain}>
+<<<<<<< HEAD
     <div className={styles.dropdown}>
       <span className={styles.Semester}>Semester 1</span>
       <DropdownIcon/>
@@ -19,6 +63,52 @@ return(
     </div>
 
        <Table/>
+=======
+    <div className={styles.dropdown} onClick={handleOpenVendorModal}>
+      <span className={styles.Semester} >{semester === "" ? "Semester 1" : semester}</span>
+      <DropdownIcon className={list? "" : styles.rotateArrow}/>
+    </div>
+    </div>
+
+    {
+      list && (
+        <div   className={styles.headingMain}>
+          <div className={styles.drop}>
+          {options &&
+                  options.length > 0 &&
+                  options.map((data, index) => (
+                    <div>
+                      <Button
+                        className={styles.Semester_btn}
+                        key={index}
+                        onClick={() => {
+                          setSemester(data.code);
+                          setList(false);
+                          
+                        }}
+                      >
+                        {data?.code}
+                      </Button>
+                    
+                      </div>
+               ))}
+
+          </div>
+  
+        </div>
+      )
+    }
+    
+
+ 
+
+
+   
+
+       <Table/>
+       <Buttons text="REGISTER COURSES" className={styles.btn} disabled={true} />
+
+>>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 
     </section>
     

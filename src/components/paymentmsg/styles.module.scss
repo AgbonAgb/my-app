@@ -1,45 +1,163 @@
-.section {
-	max-width: 70rem;
-	background-color: #fff;
-	display: flex;
-	flex-direction: column;
-	padding: 5.75rem 6.5rem 8.5625rem 6.5rem;
-	justify-content: center;
-	align-items: center;
-	margin-inline: auto;
-}
+// .section {
+// 	max-width: 112rem;
+//     background-color: #fff;
+//     display: flex;
+//     flex-direction: column;
+//     padding: 9.2rem 10.4rem 13.7rem 10.4rem;
+//     justify-content: center;
+//     align-items: center;
+//     margin-inline: auto;
+// }
 
+<<<<<<< HEAD
 .article {}
+=======
+// .article {
+// }
+
+// .heading {
+// 	display: flex;
+//     align-items: center;
+//     gap: 1.2rem;
+//     color: #574d90;
+//     font-family: Montserrat;
+//     font-size: 3.6rem;
+//     font-weight: 700;
+//     margin-block-end: 2.4rem;
+// }
+
+// .welcomeicon {
+// 	/* Icon height and width */
+// 	width: 3.48213rem;
+// 	height: 3.75rem;
+// }
+
+// .nairaicon {
+// 	width: 1.33331rem;
+// 	height: 1.25rem;
+// }
+
+// .para {
+// 	color: #011602;
+//     text-align: center;
+//     font-family: Montserrat;
+//     font-size: 2rem;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 4.4rem;
+//     margin-block-end: 1.6rem;
+// }
+
+// .para2 {
+// 	display: flex;
+// 	width: 55.7rem;
+// 	justify-content: center;
+// 	align-items: center;
+// }
+
+// .fee {
+// 	display: flex;
+//     align-items: center;
+//     color: #011602;
+//     text-align: center;
+//     font-feature-settings: "clig" off, "liga" off;
+//     font-size: 2.4rem;
+//     font-weight: 700;
+//     letter-spacing: -0.024rem;
+//     gap: 1.28rem;
+// }
+
+// .amount {
+// 	color: #574d90;
+//     text-align: center;
+//     font-feature-settings: "clig" off, "liga" off;
+//     font-family: Montserrat;
+//     font-size: 2.4rem;
+//     font-weight: 700;
+//     letter-spacing: -0.024rem;
+// }
+// .arrow {
+// 	height: 2rem;
+// 	flex-shrink: 0;
+// }
+
+// .ctndb {
+// 	color: #574d90;
+// 	font-family: Montserrat;
+// 	font-size: 1.6rem;
+// 	font-style: normal;
+// 	font-weight: 700;
+// 	line-height: 4rem;
+// 	position: relative;
+
+// 	// width and height of the pseudo element is what gives the line property
+// 	&::before {
+// 		content: '';
+// 		bottom: 0;
+// 		left: 1.28rem;
+// 		position: absolute;
+// 		width: 90%;
+// 		height: 0.2rem;
+// 		background-color: #11643c;
+// 	}
+// }
+
+// .btn {
+// 	display: flex;
+// 	gap: 0.4rem;
+// 	align-items: center;
+// 	height: 5.6rem;
+// 	padding: 1.8rem 13.95rem;
+// 	font-size: 1.6rem;
+// 	border-radius: 0.4rem;
+// 	background: #574d90;
+
+// 	margin-block-start: 6rem;
+// 	margin-block-end: 1.6rem;
+
+// 	/*Button Text */
+// 	color: #fff;
+// 	font-family: Montserrat;
+// 	font-style: normal;
+// 	font-weight: 700;
+
+// 	outline: none;
+// 	cursor: pointer;
+// 	border: none;
+// }
+
+// .section {
+// 	max-width: 112rem;
+//     background-color: #fff;
+//     display: flex;
+//     flex-direction: column;
+//     padding: 9.2em 10.4em 13.7em 10.4em;
+//     justify-content: center;
+//     align-items: center;
+//     margin-inline: auto;
+// }
+>>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 
 .heading {
-	display: flex;
-	align-items: center;
-	gap: 0.75rem;
-	/*space between welcome image and message;*/
-	/*this makes image and text to be on same line*/
-	color: #574d90;
-	font-family: Montserrat;
-	font-size: 2.25rem;
-	/*font-style: normal;*/
-	font-weight: 700;
-	line-height: 2.75rem;
-	/* 122.222% */
-	margin-block-end: 1rem;
-	/* space btw text up and down */
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: #574d90;
+  font-family: Montserrat;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-block-end: 2.4rem;
+  justify-content: center;
+  margin-block-start: 3rem;
 }
 
-.welcomeicon {
-	/* Icon height and width */
-	width: 3.48213rem;
-	height: 3.75rem;
-}
-
-.nairaicon {
-	width: 1.33331rem;
-	height: 1.25rem;
+.welcomeIcon {
+  width: 3.48213rem;
+  height: 3.75rem;
 }
 
 .para {
+<<<<<<< HEAD
 	color: #011602;
 	text-align: center;
 	font-family: Montserrat;
@@ -104,21 +222,38 @@
 		height: 0.125rem;
 		background-color: #11643c;
 	}
+=======
+  color: #011602;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4.4rem;
+  margin-block-end: 2rem;
+>>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 }
 
 .btn {
-	display: flex;
-	gap: 1.25rem;
-	align-items: center;
-	height: 3.5rem;
-	padding: 0.5rem 8.71875rem;
+  display: flex !important;
+  gap: 0.4rem !important;
+  align-items: center !important;
+  //   height: 5.6rem;
+  padding: 1.8rem 4.95rem !important;
+  font-size: 1.6rem !important;
+  border-radius: 0.4rem !important;
+  background: #574d90 !important;
 
-	border-radius: 0.25rem;
-	background: #574d90;
+  margin-block-start: 6rem !important;
+  margin-block-end: 1.6rem !important;
 
-	margin-block-start: 3.75rem;
-	margin-block-end: 1rem;
+  /*Button Text */
+  color: #fff !important;
+  font-family: Montserrat !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
 
+<<<<<<< HEAD
 	/*Button Text */
 	color: #fff;
 	font-family: Montserrat;
@@ -129,3 +264,96 @@
 	cursor: pointer;
 	border: none;
 }
+=======
+  outline: none !important;
+  cursor: pointer !important;
+  border: none !important;
+}
+
+.main {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin-block: 5rem;
+}
+
+.section {
+  width: 80%;
+}
+.section2 {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.para2 {
+  display: flex;
+  // width: 55.7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.fee {
+  //   display: flex;
+  align-items: center;
+  color: #011602;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.024rem;
+  gap: 1.28rem;
+}
+
+.amount {
+  color: #574d90;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Montserrat;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.024rem;
+}
+
+.ctndb {
+  color: #574d90;
+  font-family: Montserrat;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+//   width and height of the pseudo element is what gives the line property
+  &::before {
+    content: "";
+    bottom: 0;
+    // left: 1.28rem;
+    position: absolute;
+    width: 15rem;
+    height: 0.2rem;
+    background-color: #574d90;
+    display: flex;
+    justify-content: center;
+  }
+}
+.line {
+  content: "";
+  bottom: 0;
+  left: 1.28rem;
+  position: absolute;
+  width: 50%;
+  height: 0.2rem;
+  background-color: #574d90;
+  display: flex;
+  justify-content: center;
+}
+
+.backicon {
+  padding-right: 0.5rem;
+  width: 2.2em;
+}
+>>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec

@@ -1,27 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-/*
-  2. Remove default margin
-*/
-* {
-	margin: 0;
-}
-
-/*
-  3. Allow percentage-based heights in the application
-*/
-html,
-body {
+#root{
 	height: 100%;
+<<<<<<< HEAD
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -39,63 +20,132 @@ body {
 body {
 	line-height: 1.5;
 	font-family: 'Montserrat', sans-serif;
+=======
+  }
+  
+  body,html {
+	height: 100%;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+>>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 	-webkit-font-smoothing: antialiased;
-}
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--color-main-bg);
+  //this made it possible for us to divide px by 10 and not 16
+	font-size: 62.5%;
 
-/*
-  6. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-}
+  --color-main-bg :  #FFFFFF;
+  --color-main-primary:  #574d90;
 
-/*
-  7. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
+  // --color-black-default: #333333;
+  // --color-black-text: #011C34;
+  // --color-blacker-text: #011602;
+  // --color-green-text: #045052;
 
-/*
-  8. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
-}
+  // --color-lightgreen-bg : #8DC467;
+  // --color-lightestgreen-bg:  #D9EBCC;
+  // --color-lightergreen-bg : rgba(217, 235, 204, 0.6);
+  
 
-/*
-  9. Create a root stacking context
-*/
-#root,
-#__next {
-	isolation: isolate;
-}
-
-.error {
-	font-weight: 700;
+  
+	--font-s-2 : 0.2rem;
+	--font-s-4 : 0.4rem;
+	--font-s-14 : 1.4rem;
+	--font-s-16: 1.6rem;
+  }
+  
+  
+  html {
+	font-family: 'Poppins', sans-serif!important;
+	background-color: var(--color-quatery);
+  }
+  a {
+	  text-decoration: none;
+  }
+  
+  *,
+  *::before,
+  *::after {
+	  box-sizing: border-box;
+	  padding: 0;
+	  margin: 0;
+  }
+  
+  .css-1iji0d4{
+	background-color: inherit !important;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+	  margin: 0;
+  }
+  
+  a:link,
+  a:visited {
+	  text-decoration: none;
+  }
+  .passwordIcon path{
+	fill: #11643C !important;        
+  }
+  .star{
 	color: red;
+<<<<<<< HEAD
 	font-size: calc(18rem / 16);
 	margin-block-end: 1.1rem;
 	margin-inline: auto;
 }
 
 .success {
+=======
+>>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 	font-weight: 700;
-	color: green;
-	font-size: calc(18rem / 16);
-	margin-block-end: 1.1rem;
-}
+  }
+  .labelDiv{
+	display: block;
+	width: 100%;
+  }
+  .datepicker{
+	width: 100%;
+  }
+  .green{
+	color: #045052;
+  }
+  
+  
+  .react-datepicker {
+	font-size: 1.3rem !important;
+  }
+  
+  .react-datepicker__current-month {
+	font-size: 1.5rem !important;
+  }
+  
+  .react-datepicker__header {
+	padding-top: 6px !important;
+  }
+  
+  .react-datepicker__navigation {
+	top: 1px !important;
+  }
+  
+  .react-datepicker__day-name, .react-datepicker__day {
+	margin: 0.5rem !important;
+  }
+  
+  .back{  
+	font-weight: 500;
+	font-size: 2.4rem;
+	line-height: 4rem;
+	color: var(--color-main-primary);
+	display: flex;
+	align-items: center;
+	}
+  
+	button, label, input, select,p, textarea, span{
+	  font-family: 'Poppins', sans-serif!important;
+	}

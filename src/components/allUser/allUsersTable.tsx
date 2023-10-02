@@ -5,26 +5,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import { TableHead, styled } from "@mui/material";
 import Button from "../../custom/button/button";
-import styles from "./courseReg.module.scss";
-<<<<<<< HEAD
-import Radio from '@mui/material/Radio';
-
-
-
-const DenseTable = () => {
-  interface DogBreed {
-    course: string;
-    code: string;
-    unit: string;
-    lecturer: string;
-  }
-
-  const dogBreeds: DogBreed[] = [
-    {
-=======
+import styles from "./allUsers.module.scss";
 import CheckBox from '@mui/material/Checkbox';
 import { useState } from "react";
-
 interface Course {
   id:string;
   course: string;
@@ -41,27 +24,20 @@ const DenseTable = () => {
     const course: Course[] = [
     {
       id:"1",
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
-      course: "computer science",
-      code: "csc",
+      course: "",
+      code: "sekoni olajumoke",
       unit: "2 units",
       lecturer: "Mr. peter ojo",
     },
     {
-<<<<<<< HEAD
-=======
       id:"2",
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
       course: "computer science",
-      code: "csc",
+      code: "sekoni olajumoke",
       unit: "2 units",
       lecturer: "Mr. peter ojo",
     },
     {
-<<<<<<< HEAD
-=======
       id:"3",
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
       course: "computer science",
       code: "csc",
       unit: "2 units",
@@ -71,44 +47,28 @@ const DenseTable = () => {
 
   ];
 
-<<<<<<< HEAD
-  const tableRow =
-    dogBreeds &&
-    dogBreeds?.map((item) => (
-=======
   const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {id, checked} = e.target;
     setIsCheck([...isCheck, id]);
     if(!checked ){
         setIsCheck(isCheck.filter(item => item !== id));
     }
-
-    console.log(checked, "cjedn")
 }
-console.log(isCheck, "cjedn")
 
 
   const tableRow =
   course &&
   course?.map((item) => (
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
       <>
         <TableRow
           sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
           key={item?.course}
         >
 			
-<<<<<<< HEAD
-          <StyledCell><Radio className={styles.radio}/>{ item?.course || "N/A"}</StyledCell>
-          <StyledCell>{item?.code || "N/A"}</StyledCell>
-          <StyledCell>{item?.unit || "N/A"}</StyledCell>
-          <StyledCell>{item?.lecturer || "N/A"}</StyledCell>
-=======
-          <StyledCell><CheckBox onChange={handleClick}  id={item?.id} checked={isCheck.includes(item?.id)} className={styles.radio}/>{ item?.course || "N/A"}</StyledCell>
-          <StyledCell>{item?.code || "N/A"}</StyledCell>
-          <StyledCell>{item?.unit || "N/A"}</StyledCell>
-          <StyledCell>{item?.lecturer || "N/A"}</StyledCell>\
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
+          {/* <StyledCell><CheckBox onChange={handleClick}  id={item?.id} checked={isCheck.includes(item?.id)} className={styles.radio}/>{ item?.course || "N/A"}</StyledCell> */}
+          <StyledCell>{item?.code || "N/A"} </StyledCell>
+          <StyledCell><Button className={styles.width} text="Update"/> </StyledCell>
+          <StyledCell><Button className={styles.width} text="Delete"/></StyledCell>
         </TableRow>
 
         
@@ -125,21 +85,12 @@ console.log(isCheck, "cjedn")
         <StyledTableHead>
           <TableRow>
 		  
-            <TableCell style={{paddingInlineStart: "3rem"}}>COURSES </TableCell>
-            <TableCell>CODE</TableCell>
-            <TableCell>UNITS</TableCell>
-            <TableCell>LECTURER</TableCell>
+            <TableCell>All Users</TableCell>
+            <TableCell>Actions</TableCell>
           </TableRow>
         </StyledTableHead>
         <TableBody>{tableRow}</TableBody>
       </Table>
-	  <div   className={styles.headingMain}>
-<<<<<<< HEAD
-	  <Button text="REGISTER COURSES" className={styles.btn} disabled={true} />
-=======
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
-
-	  </div>
 	
 
       <style>{`@page { margin:2rem !important; }`}</style>

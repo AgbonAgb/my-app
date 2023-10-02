@@ -30,8 +30,25 @@
   background-color: #f9f8ff;
   justify-content: space-between;
   display: flex;
+<<<<<<< HEAD
   margin-block: 3rem;
   margin-block-end: 5rem;
+=======
+  // margin-block: 3rem;
+  // margin-block-end: 5rem;
+}
+.drop {
+  min-width: 32rem;
+  // height: 4.8rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #e1ddfc;
+  padding: 1rem;
+  background-color: #f9f8ff;
+  // justify-content: space-between;
+  // display: flex;
+ 
+  position: absolute;
+>>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 }
 .Semester {
   font-size: 1.5rem;
@@ -47,4 +64,23 @@
     // color: black !important;
     // background-color: #000000 !important;
     color: #574D90 !important;
+<<<<<<< HEAD
+=======
+    // z-index: -10 !important;
+}
+.Semester_btn{
+  width: 100%;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  padding-block-start: 0.5rem !important;
+  text-align: start !important;
+  color:  #000000 !important;
+  display: flex !important;
+  justify-content: start !important;
+}
+
+.rotateArrow {
+	transform: rotate(180deg);
+	// transition: transform 500ms ease-in-out;
+>>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 }

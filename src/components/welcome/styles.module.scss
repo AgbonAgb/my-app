@@ -1,51 +1,120 @@
-.section {
-	max-width: 70rem;
-	background-color: #fff;
-	display: flex;
-	flex-direction: column;
-	padding: 5.75rem 6.5rem 8.5625rem 6.5rem;
-	justify-content: center;
-	align-items: center;
-	margin-inline: auto;
-}
+// .section {
+// 	max-width: 112rem;
+//     background-color: #fff;
+//     display: flex;
+//     flex-direction: column;
+//     padding: 9.2rem 10.4rem 13.7rem 10.4rem;
+//     justify-content: center;
+//     align-items: center;
+//     margin-inline: auto;
+// }
+
+
+// .heading {
+// 	display: flex;
+//     align-items: center;
+//     gap: 1.2rem;
+//     color: #574d90;
+//     font-family: Montserrat;
+//     font-size: 3.6rem;
+//     font-weight: 700;
+//     margin-block-end: 2.4rem;
+// }
+
+// .welcomeIcon {
+// 	width: 3.48213rem;
+// 	height: 3.75rem;
+// }
+
+// .para {
+//     color: #011602;
+//     text-align: center;
+//     font-family: Montserrat;
+//     font-size: 2.4rem;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 4.4rem;
+//     margin-block-end: 12rem;
+// }
+
+// .btn {
+//     height: 5.6rem;
+//     padding: 1.8rem 13.95rem;
+//     border-radius: 0.4rem;
+//     background: #574d90;
+//     color: #fff;
+//     font-size: 1.6rem;
+//     font-weight: 700;
+//     outline: none;
+//     cursor: pointer;
+//     border: none;
+// }
 
 
 .heading {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: #574d90;
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-block-end: 2.4rem;
+    justify-content: center;
+    margin-block-start: 3rem;
+  }
+  
+  .welcomeIcon {
+    width: 3.48213rem;
+    height: 3.75rem;
+  }
+  
+  .para {
+    color: #011602;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 4.4rem;
+    margin-block-end: 2rem;
+  }
+  
+  .btn {
+    display: flex !important;
+    gap: 0.4rem !important;
+    align-items: center !important;
+  //   height: 5.6rem;
+    padding: 1.8rem 13.95rem !important;
+    font-size: 1.6rem !important;
+    border-radius: 0.4rem !important;
+    background: #574d90 !important;
+  
+    margin-block-start: 6rem !important;
+    margin-block-end: 1.6rem !important;
+  
+    /*Button Text */
+    color: #fff !important;
+    font-family: Montserrat !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+  
+    outline: none !important;
+    cursor: pointer !important;
+    border: none !important;
+  }
+  .main {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-block: 5rem;
+  }
+  
+  .section {
+    width: 80%;
+  }  
+  .section2 {
+	width: 100%;
+	justify-content: center;
 	display: flex;
-	align-items: center;
-	gap: 0.75rem;
-	color: #574d90;
-	font-family: Montserrat;
-	font-size: 2.25rem;
-	font-weight: 700;
-	margin-block-end: 1.5rem;
-}
-
-.welcomeIcon {
-	width: 3.48213rem;
-	height: 3.75rem;
-}
-
-.para {
-	color: #011602;
-	text-align: center;
-	font-family: Montserrat;
-	font-size: 1.5rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 2.75rem;
-	margin-block-end: 7.5rem;
-}
-
-.btn {
-	height: 3.5rem;
-	padding: 0.5rem 8.71875rem;
-	border-radius: 0.25rem;
-	background: #574d90;
-	color: #fff;
-	font-size: 1rem;
-	font-weight: 700;
-	outline: none;
-	cursor: pointer;
-	border: none;
-}
+ }

@@ -1,3 +1,7 @@
+.main{
+	display: flex;
+	justify-content: center;
+}
 .form {
 	background: #e1ddfc;
 	padding-block: 7.8rem; //vert dist between textbox
@@ -6,15 +10,33 @@
 	flex-direction: column;
 	// gap: 28px; //space btw text control
 	align-items: center;
+	width: 80%;
 }
 
 .inputSection {
-	width: 100%;
+	// width: 100%;
+	// display: flex;
+	// flex-direction: column;
+	// gap: 2.8rem; //space btw text control
+	// align-items: center;
+	// margin-block-end: 6.4rem;
+
+	background: #e1ddfc;
+	width: 75%;
 	display: flex;
 	flex-direction: column;
 	gap: 2.8rem; //space btw text control
 	align-items: center;
 	margin-block-end: 6.4rem;
+	padding-inline: 1.6rem;
+	padding-block: 3.2rem;
+
+	@media (max-width: 480px){
+		width: 100%;
+		padding-block: 2rem;
+
+    }
+
 }
 
 .btn {
@@ -26,12 +48,36 @@
 	font-family: Montserrat;
 	font-size: 2rem;
 	font-style: normal;
+	margin-inline-start: 1.6rem;
+	display: flex;
+	@media (max-width: 480px){
+		font-size: 1.5rem;
+		justify-content: space-between;
+    }
 }
 
 .span {
 	color: #e24f6d;
 	font-family: Montserrat;
-	font-size: 2rem;
+	font-size: 2.0rem;
 	font-style: normal;
 	font-weight: 700;
+	display: inline-block;
+	@media (max-width: 480px){
+		font-size: 1.5rem;
+	
+    }
 }
+
+
+.button {
+	display: flex;
+	justify-content: center;
+	padding-block: 13px;
+	margin-bottom: 16px;
+	font-family: Montserrat !important;
+	margin-block: 4rem !important;
+  }
+  .button:hover {
+	color: #fff;
+  }
