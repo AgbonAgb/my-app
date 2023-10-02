@@ -8,6 +8,7 @@ import Button from "../../custom/button/button";
 import styles from "./courseReg.module.scss";
 import CheckBox from '@mui/material/Checkbox';
 import { useState } from "react";
+
 interface Course {
   id:string;
   course: string;
@@ -97,7 +98,6 @@ console.log(isCheck, "cjedn")
         <TableBody>{tableRow}</TableBody>
       </Table>
 	  <div   className={styles.headingMain}>
-	  <Button text="REGISTER COURSES" className={styles.btn} disabled={true} />
 
 	  </div>
 	

@@ -4,6 +4,7 @@ import { ReactComponent as DropdownIcon } from '../../../src/svgs/dropdownIcon.s
 import { Button } from "@mui/material";
 import { useState } from "react";
 import styles2 from './filter/styles.module.scss';
+import Buttons from "../../custom/button/button";
 
 
 const CourseReg = ()=>{
@@ -90,6 +91,8 @@ return(
    
 
        <Table/>
+       <Buttons text="REGISTER COURSES" className={styles.btn} disabled={true} />
+
 
     </section>
     
