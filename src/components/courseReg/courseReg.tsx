@@ -1,15 +1,10 @@
 import Table from "./table"
 import styles from "./courseReg.module.scss";
 import { ReactComponent as DropdownIcon } from '../../../src/svgs/dropdownIcon.svg';
-
-
 import { Button } from "@mui/material";
-// import { useState } from "react";
-import styles2 from './filter/styles.module.scss';
 import { useState } from "react";
-// import Button from "../../custom/button/button";
-import Buttons from "../../custom/button/styledButton/main.module.scss";
-
+import styles2 from './filter/styles.module.scss';
+import Buttons from "../../custom/button/button";
 
 
 const CourseReg = ()=>{

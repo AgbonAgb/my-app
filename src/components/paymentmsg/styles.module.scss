@@ -9,9 +9,6 @@
 //     margin-inline: auto;
 // }
 
-<<<<<<< HEAD
-.article {}
-=======
 // .article {
 // }
 
@@ -136,7 +133,6 @@
 //     align-items: center;
 //     margin-inline: auto;
 // }
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 
 .heading {
   display: flex;
@@ -157,72 +153,6 @@
 }
 
 .para {
-<<<<<<< HEAD
-	color: #011602;
-	text-align: center;
-	font-family: Montserrat;
-	font-size: 1.25rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 2.75rem;
-	/* 220% */
-	margin-block-end: 1rem;
-}
-
-.para2 {
-	display: flex;
-	width: 34.8125rem;
-	justify-content: center;
-	align-items: center;
-}
-
-.fee {
-	display: flex;
-	align-items: center;
-	color: #011602;
-	text-align: center;
-	font-feature-settings: 'clig' off, 'liga' off;
-	font-size: 1.5rem;
-	font-weight: 700;
-	letter-spacing: -0.015rem;
-	gap: 0.8rem;
-}
-
-.amount {
-	color: #574d90;
-	text-align: center;
-	font-feature-settings: 'clig' off, 'liga' off;
-	font-family: Montserrat;
-	font-size: 1.5rem;
-	font-weight: 700;
-	letter-spacing: -0.015rem;
-}
-
-.arrow {
-	height: 1.25rem;
-	flex-shrink: 0;
-}
-
-.ctndb {
-	color: #574d90;
-	font-family: Montserrat;
-	font-size: 1rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 2.5rem;
-	position: relative;
-
-	// width and height of the pseudo element is what gives the line property
-	&::before {
-		content: '';
-		bottom: 0;
-		left: 0.8rem;
-		position: absolute;
-		width: 90%;
-		height: 0.125rem;
-		background-color: #11643c;
-	}
-=======
   color: #011602;
   text-align: center;
   font-family: Montserrat;
@@ -231,7 +161,6 @@
   font-weight: 400;
   line-height: 4.4rem;
   margin-block-end: 2rem;
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 }
 
 .btn {
@@ -253,18 +182,6 @@
   font-style: normal !important;
   font-weight: 700 !important;
 
-<<<<<<< HEAD
-	/*Button Text */
-	color: #fff;
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: 700;
-
-	outline: none;
-	cursor: pointer;
-	border: none;
-}
-=======
   outline: none !important;
   cursor: pointer !important;
   border: none !important;
@@ -356,4 +273,3 @@
   padding-right: 0.5rem;
   width: 2.2em;
 }
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec

@@ -19,61 +19,21 @@
 @media (min-width: 912px) {
     .content {
         padding-inline-start: 35rem;
-<<<<<<< HEAD
-        padding-inline-end: 3rem
-    }
-}
-
-=======
         padding-inline-end : 3rem
     }
 }
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 .header {
     grid-area: header;
     text-align: center;
     width: 100%;
     margin-inline: 0rem;
 }
-<<<<<<< HEAD
-
-.container {
-
-=======
 .container {
     
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
-<<<<<<< HEAD
-    grid-template-areas:
-        'navHeader'
-        'header'
-        'main';
-
-    @media screen and (min-width: 900px) {
-        margin-inline: 2rem;
-        grid-template-columns: 27.8rem 1fr;
-        grid-template-rows: auto 1fr;
-        grid-template-areas:
-            'sidebar header'
-            'sidebar main';
-
-    }
-}
-
-.navHeader {
-    grid-area: header;
-    min-width: 0;
-    position: fixed !important;
-    width: 100% !important;
-    z-index: 1 !important;
-
-    @media screen and (min-width: 1024px) {
-
-=======
     grid-template-areas: 
         'navHeader'
         'header'
@@ -97,25 +57,15 @@
     z-index: 1!important;
     @media screen and (min-width: 1024px) {
         
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
         width: 80% !important;
         margin-inline-start: 27rem !important;
     }
 
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec
 .main {
     grid-area: main;
     min-width: 0;
     overflow-y: auto;
-<<<<<<< HEAD
-
-}
-=======
     
 }
 
->>>>>>> 03ec77d06edc1f9ae7b49274c200f29970d422ec

@@ -7,8 +7,7 @@ import { User, Users } from './type';
 import { Dna } from 'react-loader-spinner';
 import { request } from '../../utils/apiCall';
 import CustomModal from '../../custom/modal/customModal';
-import InfoModal from './editModal';
-import EditUser from './editModal';
+import EditUser from "./editModal";
 
 const RegUsers = () => {
 	const [userChange, setUserChange] = useState('');
@@ -24,6 +23,8 @@ const RegUsers = () => {
 	const handleOpenEditModal = ()=>{
 		SetOpenEditModal(true)
 	}
+
+	console.log(users,"users")
 	
 
 
@@ -49,14 +50,16 @@ const RegUsers = () => {
 	};
 
 	const editUser = async (user: User) => {
+		console.log(user?.FirstName,'check')
 		
 		// set the user to state
-		// setUser(user)
+		setUser(user)
 		// setIsModalEdit(true);
 		SetOpenEditModal(true)
 		// set the boolean over of the state to open a modal
 
 	};
+	console.log(user?.FirstName,'check')
 
 	return (
 		<main className={styles.main}>
@@ -97,10 +100,9 @@ const RegUsers = () => {
             
             */}
 			  <CustomModal
-            maxWidth="xs"
+            maxWidth="md"
             open={openEditModal}
-            Content={<EditUser handleCloseEditModal={handleCloseEditModal} />}
-            handleClose={handleCloseEditModal}
+            Content={<EditUser handleCloseEditModal={handleCloseEditModal} user={user} />}
           />
 		</main>
 	);

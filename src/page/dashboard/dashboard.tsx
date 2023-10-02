@@ -1,9 +1,9 @@
 import { Drawer } from '@mui/material';
 import { useState } from 'react';
-import NavHeader from '../../components/dashBoard/navHeader/navHeader';
+import NavHeader from '../../components/mydashboard/navHeader/navHeader';
 import styles from './dashboard.module.scss';
-import ModifiedSidebar from '../../components/dashBoard/sidebar';
-import Header from '../../components/dashBoard/header/header';
+import ModifiedSidebar from '../../components/mydashboard/sidebar';
+import Header from '../../components/mydashboard/header/header';
 
 
 const drawerWidth = 259

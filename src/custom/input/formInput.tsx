@@ -86,6 +86,7 @@ export const StyledInput = styled("input")<ComponentProps>`
     min-width: 25rem !important;
  }
 
+ 
   
 
   &:focus {
