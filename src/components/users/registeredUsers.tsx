@@ -6,6 +6,9 @@ import { getRegisteredUsers } from '../../service/users';
 import { User, Users } from './type';
 import { Dna } from 'react-loader-spinner';
 import { request } from '../../utils/apiCall';
+import CustomModal from '../../custom/modal/customModal';
+import InfoModal from './editModal';
+import EditUser from './editModal';
 
 const RegUsers = () => {
 	const [userChange, setUserChange] = useState('');
@@ -13,6 +16,16 @@ const RegUsers = () => {
 	const [user, setUser] = useState({} as User);
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState<string | null>('');
+	const [openEditModal, SetOpenEditModal] = useState(false)
+
+	const handleCloseEditModal = ()=>{
+		SetOpenEditModal(false)
+	}
+	const handleOpenEditModal = ()=>{
+		SetOpenEditModal(true)
+	}
+	const notifier = require('node-notifier'); 
+
 
 	useEffect(() => {
 		(async () => {
@@ -27,6 +40,11 @@ const RegUsers = () => {
 		try {
 			await request.delete(`Authentication/DeleteUser?UserId=${userId}`);
 			// notify the user is deleted with an npm notification package
+			notifier.notify({
+				title: 'My Notification',
+				message: 'deleted succesfully.'
+			  });
+			  
 
 			setUserChange('user is deleted');
 		} catch (error) {
@@ -35,10 +53,13 @@ const RegUsers = () => {
 	};
 
 	const editUser = async (user: User) => {
+		
 		// set the user to state
 		// setUser(user)
 		// setIsModalEdit(true);
+		SetOpenEditModal(true)
 		// set the boolean over of the state to open a modal
+
 	};
 
 	return (
@@ -67,9 +88,10 @@ const RegUsers = () => {
 				) : error ? (
 					<p className='error'>{error}</p>
 				) : (
-					<Table users={users} deleteUser={deleteUser} editUser={editUser} />
+					<Table users={users} deleteUser={deleteUser} editUser={editUser}  openEditModal={openEditModal}/>
 				)}
 			</section>
+
 
 			{/* 
             render modal here
@@ -78,6 +100,12 @@ const RegUsers = () => {
             Object.values(user).length > 0 && <UserEditModal user={user} />
             
             */}
+			  <CustomModal
+            maxWidth="xs"
+            open={openEditModal}
+            Content={<EditUser handleCloseEditModal={handleCloseEditModal} />}
+            handleClose={handleCloseEditModal}
+          />
 		</main>
 	);
 };

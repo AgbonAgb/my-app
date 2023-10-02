@@ -8,33 +8,17 @@ import Button from '../../custom/button/button';
 import styles from './registeredUsers.module.scss';
 import Radio from '@mui/material/Radio';
 import { User, Users } from './type';
+import { useState } from 'react';
 
 interface Props {
 	users: Users;
 	deleteUser: (userId: string) => void;
 	editUser: (user: User) => void;
+	openEditModal:boolean;
 }
 
-const DenseTable = ({ users, deleteUser, editUser }: Props) => {
-	// interface DogBreed {
-	// 	UserId: string;
-	// 	Email: string;
-	// 	FirstName: string;
-	// 	LastName: string;
-	// 	PhoneNumber: string;
-	// 	RoleName: string;
-	// }
+const DenseTable = ({ users, deleteUser, editUser,openEditModal }: Props) => {
 
-	// const dogBreeds: DogBreed[] = [
-	// 	{
-	// 		UserId: '',
-	// 		Email: '',
-	// 		FirstName: '',
-	// 		LastName: '',
-	// 		PhoneNumber: '',
-	// 		RoleName: '',
-	// 	},
-	// ];
 
 	const tableRow =
 		users?.length > 0 &&
@@ -47,7 +31,9 @@ const DenseTable = ({ users, deleteUser, editUser }: Props) => {
 				<StyledCell>{user?.PhoneNumber || 'N/A'}</StyledCell>
 				<StyledCell>{user?.RoleName || 'N/A'}</StyledCell>
 				<StyledCell>
+					{/* <button onClick={() => editUser(user)}>Edit</button> */}
 					<button onClick={() => editUser(user)}>Edit</button>
+
 				</StyledCell>
 				<StyledCell>
 					<button onClick={() => deleteUser(user.UserId)}>Delete</button>
