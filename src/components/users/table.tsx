@@ -59,9 +59,9 @@ const DenseTable = ({ users, deleteUser, editUser,openEditModal }: Props) => {
 				</StyledTableHead>
 				<TableBody>{tableRow}</TableBody>
 			</Table>
-			<div className={styles.headingMain}>
+			{/* <div className={styles.headingMain}>
 				<Button text='REGISTER Users' className={styles.btn} disabled={true} />
-			</div>
+			</div> */}
 
 			<style>{`@page { margin:2rem !important; }`}</style>
 		</TableContainer>
