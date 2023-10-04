@@ -20,9 +20,7 @@ const RegUsers = () => {
 	const handleCloseEditModal = ()=>{
 		SetOpenEditModal(false)
 	}
-	const handleOpenEditModal = ()=>{
-		SetOpenEditModal(true)
-	}
+
 
 	console.log(users,"users")
 	
@@ -59,7 +57,6 @@ const RegUsers = () => {
 		// set the boolean over of the state to open a modal
 
 	};
-	console.log(user?.FirstName,'check')
 
 	return (
 		<main className={styles.main}>
@@ -99,7 +96,7 @@ const RegUsers = () => {
             Object.values(user).length > 0 && <UserEditModal user={user} />
             
             */}
-			  <CustomModal
+			<CustomModal
             maxWidth="md"
             open={openEditModal}
             Content={<EditUser handleCloseEditModal={handleCloseEditModal} user={user} />}

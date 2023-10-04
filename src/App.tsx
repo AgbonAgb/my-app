@@ -17,10 +17,11 @@ function App() {
 			<Route element={<Login />} path='/login' />
 			<Route element={<Welcomback />} path='/welcomback' />
 			<Route element={<Creataccount />} path='/create-account' />
-			<Route element={<RegisterredUsers />} path='/registerredusers' />
+			{/* <Route element={<RegisterredUsers />} path='/registerredusers' /> */}
 			<Route element={<Allusers />} path='/all-users' />
 
 			<Route path='/course-registration' element={<ProtectedRoute ><CourseReg/></ProtectedRoute>} />
+			<Route path='registerredusers' element={<ProtectedRoute ><RegisterredUsers/></ProtectedRoute>} />
 
 		</Routes>
 	);

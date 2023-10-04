@@ -4,10 +4,10 @@ import Button from "../../custom/button/button";
 import Input from "../../custom/input/input";
 import styles from "./edit.module.scss"
 import FormInput from "../../custom/input/formInput";
-import { Users } from "./type";
+import { User, Users } from "./type";
 
 interface Props {
-	user: any;
+	user: User;
 	handleCloseEditModal: () => void;
   
 
@@ -78,11 +78,7 @@ const EditUser = ({handleCloseEditModal,user}: Props ) => {
               />
                     </ButtonContainer>
               </div>
-              {/* <Button
-                text="Cancel"
-                className={styles.button}
-               onClick={handleCloseEditModal}
-              /> */}
+
              
 
             </form>

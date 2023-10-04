@@ -14,7 +14,7 @@ const ProtectedRoute = ({children, routeId } : ProtectedRouteProps) => {
 	const location = useLocation();
     // eslint-disable-next-line
     // return sessionDetails?.Token ? children : <Navigate to={'/'} state={{from: location}} />
-        return sessionDetails?.Token ? children : <Navigate to={'/'} state={{from: location}} />
+        return sessionDetails?.Token  ? children : <Navigate to={'/'} state={{from: location}} />
 
 };
 
