@@ -10,7 +10,7 @@ import CheckBox from '@mui/material/Checkbox';
 import { useState } from "react";
 
 interface Course {
-  id:string;
+  id:number;
   course: string;
   code: string;
   unit: string;
@@ -24,21 +24,21 @@ const DenseTable = () => {
 
     const course: Course[] = [
     {
-      id:"1",
+      id:1,
       course: "computer science",
       code: "csc",
       unit: "2 units",
       lecturer: "Mr. peter ojo",
     },
     {
-      id:"2",
+      id:2,
       course: "computer science",
       code: "csc",
       unit: "2 units",
       lecturer: "Mr. peter ojo",
     },
     {
-      id:"3",
+      id:3,
       course: "computer science",
       code: "csc",
       unit: "2 units",
@@ -55,9 +55,7 @@ const DenseTable = () => {
         setIsCheck(isCheck.filter(item => item !== id));
     }
 
-    console.log(checked, "cjedn")
 }
-console.log(isCheck, "cjedn")
 
 
   const tableRow =
@@ -66,13 +64,13 @@ console.log(isCheck, "cjedn")
       <>
         <TableRow
           sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-          key={item?.course}
+          key={item?.id}
         >
 			
-          <StyledCell><CheckBox onChange={handleClick}  id={item?.id} checked={isCheck.includes(item?.id)} className={styles.radio}/>{ item?.course || "N/A"}</StyledCell>
+          <StyledCell><CheckBox onChange={handleClick}  id={item?.id?.toString()} checked={isCheck.includes(item?.id?.toString())} className={styles.radio}/>{ item?.course || "N/A"}</StyledCell>
           <StyledCell>{item?.code || "N/A"}</StyledCell>
           <StyledCell>{item?.unit || "N/A"}</StyledCell>
-          <StyledCell>{item?.lecturer || "N/A"}</StyledCell>\
+          <StyledCell>{item?.lecturer || "N/A"}</StyledCell>
         </TableRow>
 
         

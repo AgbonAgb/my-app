@@ -65,7 +65,7 @@ return(
                     <div>
                       <Button
                         className={styles.Semester_btn}
-                        key={index}
+                        key={data?.id}
                         onClick={() => {
                           setSemester(data.code);
                           setList(false);
@@ -91,7 +91,10 @@ return(
    
 
        <Table/>
+       <div  className={styles.main}>
        <Buttons text="REGISTER COURSES" className={styles.btn} disabled={true} />
+
+       </div>
 
 
     </section>

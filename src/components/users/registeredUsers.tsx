@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState} from 'react';
 import Table from './table';
 import styles from './registeredUsers.module.scss';
 // import { ReactComponent as DropdownIcon } from '../../../src/svgs/dropdownIcon.svg';
@@ -8,6 +8,17 @@ import { Dna } from 'react-loader-spinner';
 import { request } from '../../utils/apiCall';
 import CustomModal from '../../custom/modal/customModal';
 import EditUser from "./editModal";
+import apiCall2 from '../../utils/apiCall2';
+import { useMutation } from '@tanstack/react-query';
+import { Field, FormikProvider, FormikValues, useFormik } from "formik";
+import { NotificationContext } from '../../providers/Notification';
+import { useNavigate } from 'react-router';
+import userDetails, { updateUserAuth } from '../../reduxSlice/useAuthSlice';
+import { AppDispatch, RootState } from '../../providers/store';
+import { useDispatch, useSelector } from 'react-redux';
+
+
+
 
 const RegUsers = () => {
 	const [userChange, setUserChange] = useState('');
@@ -16,14 +27,19 @@ const RegUsers = () => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState<string | null>('');
 	const [openEditModal, SetOpenEditModal] = useState(false)
+	const { showNotification } = useContext(NotificationContext);
+	const navigate = useNavigate();
+	const dispatch = useDispatch()
+	const sessionDetails = useSelector((state: RootState) => state?.useAuthSlice?.userDetails)
+
+
+
 
 	const handleCloseEditModal = ()=>{
 		SetOpenEditModal(false)
 	}
 
 
-	console.log(users,"users")
-	
 
 
 	useEffect(() => {
@@ -39,11 +55,21 @@ const RegUsers = () => {
 		try {
 			await request.delete(`Authentication/DeleteUser?UserId=${userId}`);
 			// notify the user is deleted with an npm notification package
+
 			
+				showNotification({
+				  message: "Deleted Successful",
+				  type: "success",
+				});
+
 
 			setUserChange('user is deleted');
 		} catch (error) {
 			// notify the user is not deleted with an npm notification package
+			showNotification({
+				message: "Failed",
+				type: "error",
+			  });
 		}
 	};
 
@@ -52,11 +78,24 @@ const RegUsers = () => {
 		
 		// set the user to state
 		setUser(user)
+		//set userId to redux(local storage)
+		dispatch(
+
+            updateUserAuth({...sessionDetails,
+              UserId:user?.UserId
+            })
+          );
+		  console.log(userDetails?.length,"hs");
+
 		// setIsModalEdit(true);
 		SetOpenEditModal(true)
 		// set the boolean over of the state to open a modal
+		
 
 	};
+
+	
+
 
 	return (
 		<main className={styles.main}>
@@ -87,6 +126,7 @@ const RegUsers = () => {
 					<Table users={users} deleteUser={deleteUser} editUser={editUser}  openEditModal={openEditModal}/>
 				)}
 			</section>
+			
 
 
 			{/* 
@@ -101,6 +141,7 @@ const RegUsers = () => {
             open={openEditModal}
             Content={<EditUser handleCloseEditModal={handleCloseEditModal} user={user} />}
           />
+		
 		</main>
 	);
 };

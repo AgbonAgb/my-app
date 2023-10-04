@@ -15,7 +15,7 @@ const persistConfig = {
 
 
 const rootReducer = combineReducers({ 
-    AuthUser:AuthUserReducer,
+  useAuthSlice:AuthUserReducer,
     
 
 })

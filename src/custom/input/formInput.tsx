@@ -10,7 +10,7 @@ interface ComponentProps {
   defaultValue?: any;
   icon?: string;
   autoComplete?:string;
-  asterisk?:boolean;
+  // asterisk?:boolean;
 }
 
 const FormInput: FC<ComponentProps & FieldHookConfig<string> & any> = (
@@ -23,7 +23,7 @@ const FormInput: FC<ComponentProps & FieldHookConfig<string> & any> = (
     <InputWrapper aria-label="form input container">
       {
         props.label &&
-        <Label htmlFor={props.id || props.name}>{props.asterisk === false ? props.label : <span>{props.label}<sup className="star">*</sup></span>}</Label>
+        <Label htmlFor={props.id || props.name}> <span>{props.label}</span></Label>
         
       }
       {props.type === "tel" ? (
@@ -75,15 +75,22 @@ export const StyledInput = styled("input")<ComponentProps>`
   border: 0.1rem solid #FFFFFF;
   border-radius: 0.4rem;
 
+
   @media (min-width: 1024px){
-    min-width: 60rem !important;
+    // min-width: 60rem !important;
+    max-width: ${({ width }) => (width ? width : "60rem ")};
+
  }
   @media (max-width: 1024px){
-    min-width: 50rem !important;
+    // min-width: 50rem !important;
+    max-width: ${({ width }) => (width ? width : "50rem ")};
+
  }
   
   @media (max-width: 540px){
-    min-width: 25rem !important;
+    // min-width: 25rem !important;
+    max-width: ${({ width }) => (width ? width : "25rem ")};
+
  }
 
  

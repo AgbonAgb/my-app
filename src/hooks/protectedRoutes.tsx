@@ -7,7 +7,7 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute = ({children, routeId } : ProtectedRouteProps) => {
-    const sessionDetails = useSelector((state: RootState) => state?.AuthUser?.userDetails)
+    const sessionDetails = useSelector((state: RootState) => state?.useAuthSlice?.userDetails)
 
     // const user = useSelector((state: RootState) => state?.AuthUser?.userDetails)
 

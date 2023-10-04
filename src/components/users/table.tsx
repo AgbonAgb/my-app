@@ -9,6 +9,8 @@ import styles from './registeredUsers.module.scss';
 import Radio from '@mui/material/Radio';
 import { User, Users } from './type';
 import { useState } from 'react';
+import userDetails,{ updateUserAuth } from '../../reduxSlice/useAuthSlice';
+import { AppDispatch } from '../../providers/store';
 
 interface Props {
 	users: Users;
@@ -38,6 +40,8 @@ const DenseTable = ({ users, deleteUser, editUser,openEditModal }: Props) => {
 				<StyledCell>
 					<button onClick={() => deleteUser(user.UserId)}>Delete</button>
 				</StyledCell>
+
+		
 			</TableRow>
 		));
 
@@ -97,3 +101,7 @@ export const StyledCell = styled<any>(TableCell)`
 		text-transform: capitalize;
 	}
 `;
+function useDispatch(): import("redux").Dispatch<import("redux").AnyAction> {
+	throw new Error('Function not implemented.');
+}
+

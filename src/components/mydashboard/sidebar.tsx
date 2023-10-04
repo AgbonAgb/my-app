@@ -61,7 +61,7 @@ const Sidebar = () => {
 
 					<NavLink
 						style={({ isActive }) => (isActive ? activeStyle : undefined)}
-						to='/dashboard'
+						to='/course-registration'
 						className={styles.navLinkStyle}
 					>
 						<CourseRegIcon className={styles.iconWrapper} /> <span>Course Registration</span>

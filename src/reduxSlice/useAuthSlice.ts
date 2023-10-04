@@ -7,7 +7,8 @@ export interface UserStateState {
 
 
 export interface User{
-    Token: string;
+    Token?: string;
+    UserId?:string;
 
 }
 
@@ -18,6 +19,7 @@ export interface User{
 const initialState: UserStateState = {
     userDetails : {
         Token: "",
+        UserId:""
 
  
   } 
