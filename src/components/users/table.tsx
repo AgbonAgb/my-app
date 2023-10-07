@@ -13,9 +13,10 @@ interface Props {
 	users: Users;
 	deleteUser: (userId: string) => void;
 	editUser: (user: User) => void;
+	openEditModal: boolean;
 }
 
-const DenseTable = ({ users, deleteUser, editUser }: Props) => {
+const DenseTable = ({ users, deleteUser, editUser, openEditModal }: Props) => {
 	// interface DogBreed {
 	// 	UserId: string;
 	// 	Email: string;
@@ -40,7 +41,7 @@ const DenseTable = ({ users, deleteUser, editUser }: Props) => {
 		users?.length > 0 &&
 		users?.map(user => (
 			<TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }} key={user?.UserId}>
-				<StyledCell>{user?.UserId || 'N/A'}</StyledCell>
+				{/* <StyledCell>{user?.UserId || 'N/A'}</StyledCell> */}
 				<StyledCell>{user?.Email || 'N/A'}</StyledCell>
 				<StyledCell>{user?.FirstName || 'N/A'}</StyledCell>
 				<StyledCell>{user?.LastName || 'N/A'}</StyledCell>
@@ -61,7 +62,7 @@ const DenseTable = ({ users, deleteUser, editUser }: Props) => {
 				<StyledTableHead>
 					<TableRow>
 						{/* <TableCell style={{ paddingInlineStart: "3rem" }}>Users </TableCell> */}
-						<TableCell>UserId</TableCell>
+						{/* <TableCell>UserId</TableCell> */}
 						<TableCell>Email</TableCell>
 						<TableCell>FirstName </TableCell>
 						<TableCell>LastName</TableCell>

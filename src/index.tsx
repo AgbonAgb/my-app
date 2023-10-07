@@ -4,12 +4,17 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as PageRouter } from 'react-router-dom';
+import { NotificationSnackbar, NotificationProvider } from './providers/Notification';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
 	<React.StrictMode>
-		<PageRouter>
-			<App />
-		</PageRouter>
+		<NotificationProvider>
+			<PageRouter>
+				<App />
+				<NotificationSnackbar />
+			</PageRouter>
+		</NotificationProvider>
+
 	</React.StrictMode>
 );
 

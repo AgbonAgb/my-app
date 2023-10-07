@@ -1,0 +1,17 @@
+.modal{
+    @media print {
+		& .css-rnmm7m-MuiPaper-root-MuiDialog-paper {
+			margin: 0;
+			height: calc(100%);
+			background-color: #fff;
+			max-width: 100%;
+			width: 100%;
+			padding: 0;
+			
+		}
+
+		& .css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop {
+			display: none;
+		}
+	}
+}
