@@ -8,17 +8,25 @@ import { User, Users } from './type';
 import { Dna } from 'react-loader-spinner';
 import { request } from '../../utils/apiCall';
 import CustomModal from '../../custom/modal/customModal';
-import EditUser from "./editModal";
+import EditUser from './editModal';
 import apiCall2 from '../../utils/apiCall2';
+import jwtDecode from 'jwt-decode';
 
-import { Field, FormikProvider, FormikValues, useFormik } from "formik";
+import { Field, FormikProvider, FormikValues, useFormik } from 'formik';
 // import { NotificationContext } from '../../providers/Notification';
 import { NotificationContext } from '../../providers/Notification';
 import { useNavigate } from 'react-router';
 
-
-
-
+interface DecodedToken {
+	nameid: string;
+	name: string;
+	email: string;
+	jti: string;
+	role: string;
+	nbf: number;
+	exp: number;
+	iat: number;
+}
 
 const RegUsers = () => {
 	const [userChange, setUserChange] = useState('');
@@ -26,21 +34,28 @@ const RegUsers = () => {
 	const [user, setUser] = useState({} as User);
 	const [isLoading, setIsLoading] = useState(true);
 	const [error, setError] = useState<string | null>('');
-	const [openEditModal, SetOpenEditModal] = useState(false)
+	const [openEditModal, SetOpenEditModal] = useState(false);
 	const { showNotification } = useContext(NotificationContext);
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		const token = localStorage.getItem('token');
+		const decodedToken = jwtDecode(token as string) as DecodedToken;
+
+		if (decodedToken?.role === 'Applicant') {
+			showNotification({
+				message: 'Welcome Applicant',
+				type: 'success',
+			});
+		}
+	}, []);
+
 	// const dispatch = useDispatch()
 	// const sessionDetails = useSelector((state: RootState) => state?.useAuthSlice?.userDetails)
 
-
-
-
 	const handleCloseEditModal = () => {
-		SetOpenEditModal(false)
-	}
-
-
-
+		SetOpenEditModal(false);
+	};
 
 	useEffect(() => {
 		(async () => {
@@ -56,37 +71,28 @@ const RegUsers = () => {
 			await request.delete(`Authentication/DeleteUser?UserId=${userId}`);
 			// notify the user is deleted with an npm notification package
 
-
 			showNotification({
-				message: "Deleted Successful",
-				type: "success",
+				message: 'Deleted Successful',
+				type: 'success',
 			});
-
 
 			setUserChange('user is deleted');
 		} catch (error) {
 			// notify the user is not deleted with an npm notification package
 			showNotification({
-				message: "Failed",
-				type: "error",
+				message: 'Failed',
+				type: 'error',
 			});
 		}
 	};
 
 	const editUser = async (user: User) => {
-		console.log(user?.FirstName, 'check')
-
 		// set the user to state
-		setUser(user)
+		setUser(user);
 
-		SetOpenEditModal(true)
+		SetOpenEditModal(true);
 		// set the boolean over of the state to open a modal
-
-
 	};
-
-
-
 
 	return (
 		<main className={styles.main}>
@@ -118,8 +124,6 @@ const RegUsers = () => {
 				)}
 			</section>
 
-
-
 			{/* 
             render modal here
             check if the user exist 
@@ -128,11 +132,10 @@ const RegUsers = () => {
             
             */}
 			<CustomModal
-				maxWidth="md"
+				maxWidth='md'
 				open={openEditModal}
 				Content={<EditUser handleCloseEditModal={handleCloseEditModal} user={user} />}
 			/>
-
 		</main>
 	);
 };
