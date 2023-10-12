@@ -81,3 +81,16 @@
   .button:hover {
 	color: #fff;
   }
+
+  .width{
+	// width: 100% !important;
+	@media (min-width: 1024px){
+		min-width: 60rem !important;
+	 }
+	  @media (max-width: 1024px){
+		min-width: 50rem !important;
+	 }
+	  @media (max-width: 540px){
+		min-width: 25rem !important;	
+	 }	
+}

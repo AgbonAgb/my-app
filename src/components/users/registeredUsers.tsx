@@ -101,7 +101,7 @@ const RegUsers = () => {
 		<main className={styles.main}>
 			<section className={styles.section}>
 				<div className={styles.headingMain}>
-					<p className={styles.headerStyle}>Registtered Users </p>
+					<p className={styles.headerStyle}>Registered Users </p>
 				</div>
 
 				{/* <div className={styles.headingMain}>
@@ -117,8 +117,9 @@ const RegUsers = () => {
 						height='80'
 						width='80'
 						ariaLabel='dna-loading'
-						wrapperStyle={{ marginInline: 'auto' }}
+						wrapperStyle={{ marginInline: 'auto',display:'flex',justifyContent:'center' }}
 						wrapperClass='dna-wrapper'
+						
 					/>
 				) : error ? (
 					<p className='error'>{error}</p>

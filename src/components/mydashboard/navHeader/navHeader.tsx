@@ -17,6 +17,9 @@ import {
   import {AiOutlineSearch as SearchIcon} from 'react-icons/ai';
   import {IoReload as ReloadIcon} from 'react-icons/io5';
   import { useNavigate } from "react-router-dom";
+import { updateUserAuth } from "../../../reduxSlice/useAuthSlice";
+import { User } from "../../users/type";
+import { useDispatch } from "react-redux";
   
   
   interface HeaderProps {
@@ -49,8 +52,14 @@ import {
     const [unreadCount, setUnreadCount] = useState<number>(0);
     
     const navigate = useNavigate();
+    const dispatch = useDispatch()
   
-   
+    const handleLogout = () => {
+      dispatch(updateUserAuth({} as User ));
+          window.localStorage.clear();    
+          navigate('/login');
+      }
+  
    
   
     const nthNumber = (number: number) => {
@@ -268,11 +277,11 @@ import {
                 fontSize: "2rem",
               }}
             >
-              <ProfileIcon/>
+              <ProfileIcon className={styles.logout}/>
               View Profile
             </MenuItem>
             <MenuItem
-            //   onClick={handleLogout}
+              onClick={handleLogout}
               style={{
                 height: "auto",
                 paddingBlock: "1px",
@@ -280,7 +289,7 @@ import {
                 fontSize: "2rem",
               }}
             >
-              <Logout />
+              <Logout className={styles.logout} />
               Logout
             </MenuItem>
           </Menu>
@@ -350,3 +359,5 @@ import {
         border-radius: 5px;
 }
 `
+
+

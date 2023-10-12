@@ -76,22 +76,22 @@ export const StyledInput = styled("input")<ComponentProps>`
   border-radius: 0.4rem;
 
 
-  @media (min-width: 1024px){
-    // min-width: 60rem !important;
-    max-width: ${({ width }) => (width ? width : "60rem ")};
+//   @media (min-width: 1024px){
+//     // min-width: 60rem !important;
+//     min-width: ${({ width }) => (width ? width : "60rem ")};
 
- }
-  @media (max-width: 1024px){
-    // min-width: 50rem !important;
-    max-width: ${({ width }) => (width ? width : "50rem ")};
+//  }
+//   @media (max-width: 1024px){
+//     // min-width: 50rem !important;
+//     min-width: ${({ width }) => (width ? width : "50rem ")};
 
- }
+//  }
   
-  @media (max-width: 540px){
-    // min-width: 25rem !important;
-    max-width: ${({ width }) => (width ? width : "25rem ")};
+//   @media (max-width: 540px){
+//     // min-width: 25rem !important;
+//     min-width: ${({ width }) => (width ? width : "25rem ")};
 
- }
+//  }
 
  
   

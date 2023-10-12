@@ -3,10 +3,14 @@ import Homepage from './page/home';
 import Login from './page/login/login';
 import Welcomback from './page/welcomback';
 import Creataccount from './page/createaccount';
-//import Dashboard from './page/dashboard/dashboard';
 import CourseReg from './page/courseReg/courseReg'
 import RegisterredUsers from './page/regUsers/regUsers'
 import ProtectedRoute from './hooks/protectedRoutes';
+import ApplicationForm from './page/applicationForm/main'
+import ApplicationStatus from './page/applicationStatus/main'
+import Notification from './page/notification/notification'
+import Profile from './page/profile/profile'
+
 
 function App() {
 	return (
@@ -17,7 +21,13 @@ function App() {
 			<Route element={<Creataccount />} path='/create-account' />
 
 			<Route path='/course-registration' element={<ProtectedRoute ><CourseReg/></ProtectedRoute>} />
-			<Route path='registerredusers' element={<ProtectedRoute ><RegisterredUsers/></ProtectedRoute>} />
+			<Route path='/registerredusers' element={<ProtectedRoute ><RegisterredUsers/></ProtectedRoute>} />
+			<Route path='/application-form' element={<ProtectedRoute ><ApplicationForm/></ProtectedRoute>} />
+			<Route path='/application-status' element={<ProtectedRoute ><ApplicationStatus/></ProtectedRoute>} />
+			<Route path='/notification' element={<ProtectedRoute ><Notification/></ProtectedRoute>} />
+			<Route path='/dashboard' element={<ProtectedRoute ><Profile/></ProtectedRoute>} />
+
+
 
 		</Routes>
 	);

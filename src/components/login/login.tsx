@@ -100,13 +100,16 @@ const Login = () => {
               label="Email Address"
               name="Email"
               as={FormInput}
-              type="text"             
+              type="text"    
+              className={styles.width}         
             />
             <Field
               label="Password"
               name="Password"
               as={FormInput}
               type="password" 
+              className={styles.width}         
+
             />
             <p className={styles.para1}>Forgot Password?</p>
             <Button

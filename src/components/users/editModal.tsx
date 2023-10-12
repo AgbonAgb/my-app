@@ -1,10 +1,9 @@
 import { styled } from "@mui/material";
 import { Field, FormikProvider, FormikValues, useFormik } from "formik";
 import Button from "../../custom/button/button";
-import Input from "../../custom/input/input";
 import styles from "./edit.module.scss"
 import FormInput from "../../custom/input/formInput";
-import { User, Users } from "./type";
+import { User } from "./type";
 import { useSelector } from "react-redux";
 import { RootState } from "../../providers/store";
 import apiCall2 from "../../utils/apiCall2";
@@ -68,7 +67,7 @@ const EditUser = ({handleCloseEditModal,user}: Props ) => {
         });
       } catch (error: any) {
         showNotification({
-        message: error?.response?.data?.title ?? error?.mesage,
+        message: error?.response?.data?.title || error?.mesage || "Failed",
         type: "error",
         });
       }
@@ -182,11 +181,10 @@ const EditUser = ({handleCloseEditModal,user}: Props ) => {
                 text="Edit"
                 className={styles.button}
                 onClick={()=>{formik?.handleSubmit()}}
+                disabled={EditMutation?.isLoading}
               />
                     </ButtonContainer>
-              </div>
-
-             
+              </div>      
 
             </form>
           </section>
@@ -211,7 +209,7 @@ export const FormWrapper = styled('div')`
     justify-content: center;
     gap: 2rem;
 
-    @media (max-width: 1024px){
+    @media (max-width: 540px){
         display: block;
     }
     `

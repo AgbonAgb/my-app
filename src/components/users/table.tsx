@@ -6,11 +6,7 @@ import TableRow from '@mui/material/TableRow';
 import { TableHead, styled } from '@mui/material';
 import Button from '../../custom/button/button';
 import styles from './registeredUsers.module.scss';
-import Radio from '@mui/material/Radio';
 import { User, Users } from './type';
-import { useState } from 'react';
-import userDetails,{ updateUserAuth } from '../../reduxSlice/useAuthSlice';
-import { AppDispatch } from '../../providers/store';
 
 interface Props {
 	users: Users;
@@ -33,7 +29,6 @@ const DenseTable = ({ users, deleteUser, editUser,openEditModal }: Props) => {
 				<StyledCell>{user?.PhoneNumber || 'N/A'}</StyledCell>
 				<StyledCell>{user?.RoleName || 'N/A'}</StyledCell>
 				<StyledCell>
-					{/* <button onClick={() => editUser(user)}>Edit</button> */}
 					<button onClick={() => editUser(user)}>Edit</button>
 
 				</StyledCell>
@@ -46,7 +41,9 @@ const DenseTable = ({ users, deleteUser, editUser,openEditModal }: Props) => {
 		));
 
 	return (
-		<TableContainer sx={{ marginBlockEnd: '4rem' }}>
+		<>
+
+<TableContainer sx={{ marginBlockEnd: '4rem' }}>
 			<Table sx={{ minWidth: 650, border: 'none' }} size='medium' aria-label='a dense table'>
 				<StyledTableHead>
 					<TableRow>
@@ -63,12 +60,16 @@ const DenseTable = ({ users, deleteUser, editUser,openEditModal }: Props) => {
 				</StyledTableHead>
 				<TableBody>{tableRow}</TableBody>
 			</Table>
-			<div className={styles.headingMain}>
-				<Button text='REGISTER Users' className={styles.btn} disabled={true} />
-			</div>
+		
 
 			<style>{`@page { margin:2rem !important; }`}</style>
 		</TableContainer>
+		
+		<div className={styles.headingMain}>
+				<Button text='REGISTER Users' className={styles.btn} disabled={true} />
+			</div></>
+	
+		
 	);
 };
 
@@ -101,7 +102,5 @@ export const StyledCell = styled<any>(TableCell)`
 		text-transform: capitalize;
 	}
 `;
-function useDispatch(): import("redux").Dispatch<import("redux").AnyAction> {
-	throw new Error('Function not implemented.');
-}
+
 

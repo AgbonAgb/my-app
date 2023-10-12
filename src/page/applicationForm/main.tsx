@@ -1,13 +1,12 @@
 import { lazy, Suspense } from "react";
 import Dashboard from "../dashboard/dashboard";
 import CircularLoader from "../../custom/circularLoader/circularLoader";
-const Main = lazy(() => import('../../components/courseReg/courseReg'))
+const Main = lazy(() => import('../../components/applicationForm/main'))
 
 const CourseReg = () => {
     return (
         <Dashboard 
-        heading="Course Registration"
-        paragraph="Register courses for the semester. You must have a minimum of 20 units per semester," 
+        heading="Application Form"
     >
         <Suspense fallback={<CircularLoader/>}>
             <Main/>

@@ -3,7 +3,6 @@ import styles from "./courseReg.module.scss";
 import { ReactComponent as DropdownIcon } from '../../../src/svgs/dropdownIcon.svg';
 import { Button } from "@mui/material";
 import { useState } from "react";
-import styles2 from './filter/styles.module.scss';
 import Buttons from "../../custom/button/button";
 
 

@@ -14,9 +14,10 @@ interface Props {
     window?: () => Window;
 	heading?: string;
 	paragraph?: string;
+    sideHeading?: string;
 }
 
-const Main: React.FC<ComponentProps & Props> = ({children,heading, paragraph, window,}) => {
+const Main: React.FC<ComponentProps & Props> = ({children,heading, paragraph, sideHeading, window}) => {
     const [mobileOpen, setMobileOpen] = useState(false);
     const handleSidebarToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -31,7 +32,7 @@ const Main: React.FC<ComponentProps & Props> = ({children,heading, paragraph, wi
                 <NavHeader handleSidebarToggle={handleSidebarToggle} />
             </div>
 			<div className={styles.header}>
-                <Header heading={heading} paragraph={paragraph}/>
+                <Header  heading={heading}  paragraph={paragraph} sideHeading={sideHeading}/>
             </div>
             <Drawer
                 variant="temporary"

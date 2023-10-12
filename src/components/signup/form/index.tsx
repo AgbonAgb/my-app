@@ -99,6 +99,7 @@ const Form = () => {
               name="lastName"
               as={FormInput}
               type="text"
+              className={styles.width}
             />
             <Field
               label="First Name"

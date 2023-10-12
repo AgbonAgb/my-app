@@ -1,0 +1,22 @@
+.main{
+	display: flex;
+	justify-content: center;
+}
+.inputSection {
+	width: 90%  ;
+    margin-block-start: 10rem;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	padding-block: 13px;
+	margin-bottom: 16px;
+	font-family: Montserrat !important;
+	margin-block: 10rem !important;
+	width: 32rem ;
+	background-color: #C4C7CD;
+	@media (max-width: 280px){
+		max-width: 25rem !important;	
+	 }	
+  }
