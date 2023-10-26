@@ -15,7 +15,8 @@ import * as Yup from "yup";
 import { FormWrapper } from '../users/editModal';
 import { styled } from '@mui/system';
 import { ReactComponent as UploadFile } from '../../../src/svgs/uploadFile.svg';
-
+import CustomModal from '../../custom/modal/customModal';
+import PaymentModal from './modal/paymentModal';
 
 interface LoginPayload {
   school: string,
@@ -32,13 +33,9 @@ const Login = () => {
   const [fileName,setfileName] = useState("")
   const [fileSize,setFileSize] = useState(0)
   const sessionDetails = useSelector((state: RootState) => state?.useAuthSlice?.userDetails)
+  const [openEditModal, setOpenEditModal] = useState(false)
 
   const { showNotification } = useContext(NotificationContext);
-
-
-
-
-
 
 
   const applicationApi = async (payload: LoginPayload) => {
@@ -81,6 +78,9 @@ const Login = () => {
     }
   };
 
+  const handleCloseEditModal = ()=>{
+    setOpenEditModal(false)
+  }
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return;
@@ -111,6 +111,11 @@ const Login = () => {
     },
     validationSchema: validationSchema,
   });
+  const onSubmit=()=>{
+    formik?.handleSubmit()
+    setOpenEditModal(true)
+
+  }
 
   return (
     <FormikProvider value={formik}>
@@ -190,10 +195,18 @@ const Login = () => {
               text={applicationMutation?.isLoading ? "Sign in..." : "PROCEED TO PAYMENT"}
               className={styles.button}
               disabled={applicationMutation?.isLoading}
+              onClick={onSubmit}
             />
             </FormWrapper>
 
           </form>
+          <CustomModal
+            maxWidth="md"
+            open={openEditModal}
+            Content={<PaymentModal  amount={200}
+            // />}
+              handleCloseEditModal={handleCloseEditModal} />}
+          />
         </section>
       </main>
     </FormikProvider>

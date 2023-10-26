@@ -27,7 +27,7 @@ const Login = () => {
 
   useEffect(() => {
   	if (sessionDetails?.Token) {
-  		navigate('/course-registration');
+  		navigate('/dashboard');
   	}
   }, [sessionDetails?.Token]);
 

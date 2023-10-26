@@ -1,0 +1,157 @@
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: #574d90;
+    font-family: Montserrat;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-block-end: 2.4rem;
+    justify-content: center;
+    margin-block-start: 3rem;
+  }
+  
+  .welcomeIcon {
+    width: 3.48213rem;
+    height: 3.75rem;
+  }
+  
+  .para {
+    color: #011602;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 4.4rem;
+    margin-block-end: 2rem;
+  }
+  
+  .btn {
+    display: flex !important;
+    gap: 0.4rem !important;
+    align-items: center !important;
+    //   height: 5.6rem;
+    padding: 1.8rem 4.95rem !important;
+    font-size: 1.6rem !important;
+    border-radius: 0.4rem !important;
+    background: #574d90 !important;
+  
+    margin-block-start: 6rem !important;
+    margin-block-end: 1.6rem !important;
+  
+    /*Button Text */
+    color: #fff !important;
+    font-family: Montserrat !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+  
+    outline: none !important;
+    cursor: pointer !important;
+    border: none !important;
+  }
+  
+  .main {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-block: 2rem;
+  }
+  .main2 {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    // margin-block: 2rem;
+  }
+  
+  .section {
+    width: 80%;
+  }
+  .section2 {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .para2 {
+    display: flex;
+    // width: 55.7rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fee {
+    //   display: flex;
+    align-items: center;
+    color: #011602;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.024rem;
+    gap: 1.28rem;
+  }
+  
+  .amount {
+    color: #574d90;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.024rem;
+  }
+  
+  .ctndb {
+    color: #574d90;
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  
+  //   width and height of the pseudo element is what gives the line property
+    &::before {
+      content: "";
+      bottom: 0;
+      // left: 1.28rem;
+      position: absolute;
+      width: 15rem;
+      height: 0.2rem;
+      background-color: #574d90;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .line {
+    content: "";
+    bottom: 0;
+    left: 1.28rem;
+    position: absolute;
+    width: 50%;
+    height: 0.2rem;
+    background-color: #574d90;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .backicon {
+    padding-right: 0.5rem;
+    width: 2.2em;
+  }
+  .button {
+	display: flex;
+	justify-content: center;
+	// padding-block: 13px;
+	// margin-bottom: 16px;
+	font-family: Montserrat !important;
+	margin-block-start: 4rem !important;
+	width: 32rem ;
+	@media (max-width: 280px){
+		max-width: 25rem !important;	
+	 }	
+  }

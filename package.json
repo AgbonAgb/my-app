@@ -8,6 +8,7 @@
     "@mui/material": "^5.14.10",
     "@mui/styled-engine-sc": "^5.14.10",
     "@mui/system": "^5.14.10",
+    "@mui/x-charts": "^6.0.0-alpha.14",
     "@reduxjs/toolkit": "^1.9.6",
     "@tanstack/react-query": "^4.35.3",
     "@testing-library/jest-dom": "^5.14.1",

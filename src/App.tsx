@@ -10,6 +10,8 @@ import ApplicationForm from './page/applicationForm/main'
 import ApplicationStatus from './page/applicationStatus/main'
 import Notification from './page/notification/notification'
 import Profile from './page/profile/profile'
+import AdminDashboard from './page/admin/dashboard/main'
+
 
 
 function App() {
@@ -26,6 +28,14 @@ function App() {
 			<Route path='/application-status' element={<ProtectedRoute ><ApplicationStatus/></ProtectedRoute>} />
 			<Route path='/notification' element={<ProtectedRoute ><Notification/></ProtectedRoute>} />
 			<Route path='/dashboard' element={<ProtectedRoute ><Profile/></ProtectedRoute>} />
+
+
+
+			{/* Admin */}
+			<Route path='/admin-dashboard' element={<ProtectedRoute ><AdminDashboard/></ProtectedRoute>} />
+
+
+
 
 
 
