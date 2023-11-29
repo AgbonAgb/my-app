@@ -11,6 +11,7 @@ import ApplicationStatus from './page/applicationStatus/main'
 import Notification from './page/notification/notification'
 import Profile from './page/profile/profile'
 import AdminDashboard from './page/admin/dashboard/main'
+import Applicants from './page/applicants/applicants'
 
 
 
@@ -28,6 +29,7 @@ function App() {
 			<Route path='/application-status' element={<ProtectedRoute ><ApplicationStatus/></ProtectedRoute>} />
 			<Route path='/notification' element={<ProtectedRoute ><Notification/></ProtectedRoute>} />
 			<Route path='/dashboard' element={<ProtectedRoute ><Profile/></ProtectedRoute>} />
+			<Route path='/applicants' element={<ProtectedRoute ><Applicants/></ProtectedRoute>} />
 
 
 

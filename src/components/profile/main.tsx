@@ -1,7 +1,7 @@
 import styles from "./main.module.scss";
 import { styled } from "@mui/system";
 import { ReactComponent as Ellipse } from "../../svgs/circle.svg";
-import { ReactComponent as CancelIcon } from "../../svgs/cancel.svg";
+import { ReactComponent as Test } from "../../svgs/test.svg";
 import { ReactComponent as Approved } from "../../svgs/Approved.svg";
 import { FormWrapper } from "../users/editModal";
 import Button from "../../custom/button/styledButton/styledButton";
@@ -11,9 +11,11 @@ const Profile = () => {
     <>
       <main className={styles.main}>
         <section className={styles.inputSection}>
-          <div className={styles.wrapper} style={{gap:"2rem"}}>
-            <div className={styles.circleSection}>
-              <Ellipse />
+          <div className={styles.wrapper} style={{gap:"6rem"}}>
+            <div className={styles.guide}>
+              <Ellipse/>
+              {/* <Test  /> */}
+              <p className={styles.circle}>65%</p>
             </div>
             <div >
 <div className={styles.card}>
@@ -72,58 +74,6 @@ const Profile = () => {
     </>
   );
 };
-
-// const Profile = () => {
-//   return (
-//     <>
-//       <main className={styles.main}>
-//         <section className={styles.inputSection}>
-//           {/* <div className={styles.circleSection}> */}
-//             {/* <div> */}
-//               <Ellipse />
-//             {/* </div> */}
-//             {/* <CancelIcon/> */}
-//             <div className={styles.card}>
-//               <p>
-//                 Complete your application & get approved to allow you register
-//                 courses for the semester.
-//               </p>
-//               <p style={{ paddingBlockStart: "2rem" }}>
-//                 Deadline: 15th August 2023
-//               </p>
-//             {/* </div> */}
-//           </div>
-//         </section>
-//       </main>
-
-//       <section className={styles.main} style={{ marginBlockStart: "2rem" }}>
-//         <div className={styles.wrapper}>
-//           <div className={styles.rec2}>
-//             <div className={styles.card}>
-//               <p>Applicant Status</p>
-//             </div>
-//             <div className={styles.status}>
-//               <CancelIcon />
-//               <CancelIcon />
-//             </div>
-//           </div>
-
-//           <div className={styles.rec2}>
-//             <div className={styles.card}>
-//               <p>Applications Pending Approval</p>
-//               <div className={styles.circleSection}>
-//                 <CancelIcon />
-//                 {/* <section className={styles.main}> */}
-//                 {/* <Button text="PROCEED TO PAYMENT"  className={styles.button} /> */}
-//                 {/* </section> */}
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </>
-//   );
-// };
 
 export default Profile;
 export const Label = styled("p")`

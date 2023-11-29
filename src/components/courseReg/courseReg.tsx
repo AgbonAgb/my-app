@@ -8,7 +8,9 @@ import Buttons from "../../custom/button/button";
 
 const CourseReg = ()=>{
   const [list, setList] = useState(false)
-  const [semester, setSemester] = useState(" Semester 1")
+  const [semester, setSemester] = useState(" Semester 1");
+  const [pageNumber, setPageNumber] = useState(1);
+	const [pageSize] = useState(20);
 
   interface Course {
     id: number;
@@ -30,15 +32,17 @@ const CourseReg = ()=>{
       unit: "2 units",
       lecturer: "Mr. peter ojo",
     },
-
-    
-
   ];
 
-  const handleOpenVendorModal = () => {
+  const handleOpenModal = () => {
     setList(!list);
     // setIsOpen(false);
   };
+
+  const pagenate = (pageNumber: number): void => {
+		setPageNumber(pageNumber);
+	};
+
   
 return(
   <main className={styles.main}>
@@ -48,7 +52,7 @@ return(
     </div>
     
     <div   className={styles.headingMain}>
-    <div className={styles.dropdown} onClick={handleOpenVendorModal}>
+    <div className={styles.dropdown} onClick={handleOpenModal}>
       <span className={styles.Semester} >{semester === "" ? "Semester 1" : semester}</span>
       <DropdownIcon className={list? "" : styles.rotateArrow}/>
     </div>
@@ -82,14 +86,15 @@ return(
         </div>
       )
     }
-    
 
- 
-
-
-   
-
-       <Table/>
+       <Table
+       	pageNumber={1}
+        // {Number(data?.pageNumber ? data?.pageNumber : 1)}
+         totalPageSize={1}
+        //  {Number(data?.totalSize ? data?.totalSize : 0)}
+         pageSize={pageSize}
+         setPageNumber={pagenate}
+       />
        <div  className={styles.main}>
        <Buttons text="REGISTER COURSES" className={styles.btn} disabled={true} />
 

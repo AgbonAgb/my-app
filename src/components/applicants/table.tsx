@@ -5,9 +5,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import { TableHead, styled } from "@mui/material";
 import Button from "../../custom/button/button";
-import styles from "./courseReg.module.scss";
+import styles from "./main.module.scss";
 import CheckBox from '@mui/material/Checkbox';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Pagination from "../../custom/pagination";
 
 interface Course {
@@ -28,6 +28,10 @@ interface Props {
 const DenseTable = ({ pageNumber, pageSize, totalPageSize, setPageNumber }: Props) => {
 
   const [isCheck, setIsCheck] = useState<string[]>([]);
+  const [isCheckAll, setIsCheckAll] = useState(false);
+  const [list, setList] = useState<Course[]>([]);
+
+
 
 
     const course: Course[] = [
@@ -79,6 +83,15 @@ const DenseTable = ({ pageNumber, pageSize, totalPageSize, setPageNumber }: Prop
           <StyledCell>{item?.code || "N/A"}</StyledCell>
           <StyledCell>{item?.unit || "N/A"}</StyledCell>
           <StyledCell>{item?.lecturer || "N/A"}</StyledCell>
+         
+        
+          <StyledCell>
+					<button >Delete</button>
+                    <button >Delete</button>
+				</StyledCell>
+                {/* <StyledCell>
+					<button >Delete</button>
+				</StyledCell> */}
         </TableRow>
 
         
@@ -95,15 +108,18 @@ const DenseTable = ({ pageNumber, pageSize, totalPageSize, setPageNumber }: Prop
         <StyledTableHead>
           <TableRow>
 		  
-            <TableCell style={{paddingInlineStart: "3rem"}}>COURSES </TableCell>
-            <TableCell>CODE</TableCell>
-            <TableCell>UNITS</TableCell>
-            <TableCell>LECTURER</TableCell>
+            <TableCell><CheckBox className={styles.radio}/>Applicant Name </TableCell>
+            <TableCell>Faculty</TableCell>
+            <TableCell>Department</TableCell>
+            <TableCell>Course</TableCell>
+            <TableCell>Approve</TableCell>
           </TableRow>
         </StyledTableHead>
         <TableBody>{tableRow}</TableBody>
       </Table>
+	  <div   className={styles.headingMain}>
 
+	  </div>
         <Pagination
 					pageNumber={pageNumber}
 					totalSize={totalPageSize}
@@ -118,9 +134,8 @@ const DenseTable = ({ pageNumber, pageSize, totalPageSize, setPageNumber }: Prop
 export default DenseTable;
 export const StyledTableHead = styled(TableHead)`
   box-shadow: none;
-
   & tr {
-    // background-color: #f3f8fc;
+    background-color: #EDEBF8;
     // border: 0.5px solid #eaf4fb;
     border-radius: 10px 10px 0px 0px;
   }

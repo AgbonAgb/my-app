@@ -97,6 +97,9 @@ export const Para = styled('p')`
     color: #000000;
     padding-inline-start : 1rem;
     padding-block-end: 1rem;
+    @media (max-width: 540px){
+      padding-block-start: 3rem;	
+     }	
 `
 export const Para1 = styled('span')`
     font-weight: 400;
@@ -111,11 +114,17 @@ export const Para2= styled('span')`
     
 `
 export const GreenLine = styled('div')`
-width: 26.4rem;
+width: 86.em;
 height: 0.8rem;
 border-radius: 2rem;
 background-color: #39A430;
 border: solid #39A430 1px;
+@media (width: 1024px){
+  max-width: 25em ;	
+ }	
+@media (max-width: 540px){
+  max-width: 25rem !important;	
+ }	
 `
 export const WhiteLine = styled('div')`
 width: 26.4rem;

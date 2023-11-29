@@ -1,13 +1,12 @@
 import { lazy, Suspense } from 'react';
 import CircularLoader from "../../custom/circularLoader/circularLoader";
 import Dashboard from '../dashboard/dashboard';
-import { Dna } from 'react-loader-spinner';
-const Main = lazy(() => import('../../components/notification/main'));
+const Main = lazy(() => import('../../components/applicants/main'));
 
-const RegUsers = () => {
+const Applicant = () => {
 	return (
 		<Dashboard
-		 sideHeading='Notifications'
+		 sideHeading='Applicants'
 		//  paragraph='Successfully Registered Students,'
 		 >
 			<Suspense fallback={<CircularLoader/>}>
@@ -17,4 +16,4 @@ const RegUsers = () => {
 	);
 };
 
-export default RegUsers;
+export default Applicant;

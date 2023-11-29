@@ -25,22 +25,26 @@ width: 32rem;
 height: 32rem;
 }
 .circle{
-    width: 26.2rem;
-    height: 26.2rem;
-    background-color: #2C19B2;
-    border: #2C19B2 solid 1px;
+   
     font-weight: 500;
-    size:8rem;
-    line-height: 9.7rem;
-    border-radius: 50%;
-    display: flex;
-    position: absolute;
-    left:28%;
-    top:31.5%;
-    // transform: translate(-50%, -50%);
-    // display: flex;
     justify-content: center;
     align-items: center; 
+    display: flex;
+    position: absolute;
+    font-size: 12em;
+    color: #FFFFFF;
+    // size:8rem;
+    // line-height: 9.7rem;
+    // border-radius: 50%;
+    // left:28%;
+    // top:31.5%;
+    // transform: translate(-50%, -50%);
+    // display: flex;
+     // width: 26.2rem;
+    // height: 26.2rem;
+    // background-color: #2C19B2;
+    // border: #2C19B2 solid 1px;
+    
 
 
     // right: 2rem;
@@ -48,6 +52,13 @@ height: 32rem;
 	// left:40.5rem
 
     }
+
+}
+.guide{
+	display: flex;
+	justify-content: center;
+    // width: 100%;
+    align-items: center; 
 
 }
 .wrapper{

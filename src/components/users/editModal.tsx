@@ -92,14 +92,14 @@ const EditUser = ({handleCloseEditModal,user}: Props ) => {
 
   const formik = useFormik<FormikValues>({
     initialValues: {
-      userRole: "",
-      firstName: "",
-      lastName: "",
+      userRole: user?.RoleName,
+      firstName: user?.FirstName,
+      lastName: user?.LastName,
       userType: "Applicant",
       userName:"",
-      email: "",
+      email: user?.Email,
       password: "",
-      phone: "",
+      phone: user?.PhoneNumber || "N/A",
     },
     onSubmit: (values, { resetForm }) => {
       EditHandler(values, resetForm);
